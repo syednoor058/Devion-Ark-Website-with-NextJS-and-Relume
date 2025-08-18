@@ -23,7 +23,6 @@ export default function Home() {
         <link rel="canonical" href="https://www.devionark.com/" />
       </Head>
       <Hero
-        title="Transforming Your Ideas Into Digital Reality"
         description="We are a digital-first agency helping businesses grow through custom software, web development, and performance-driven marketing. From strategic planning to execution, we build tailored solutions that boost visibility, automate workflows, and drive real results."
       />
       <Features />

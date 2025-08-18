@@ -1,5 +1,6 @@
 "use client";
 
+import { CONTACT, HOME } from "@/routes/websiteRoute";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -19,6 +20,7 @@ import {
 } from "react-icons/lu";
 import { RxChevronDown } from "react-icons/rx";
 import { useMediaQuery } from "react-responsive";
+import logoDark from "../../../public/images/logo/logo-dark.png";
 import gymWebMock from "../../../public/images/portfolio/gym-website.jpg";
 import realEstateMock from "../../../public/images/portfolio/real-estate-software.jpg";
 import { LinkButton, PrimaryButton } from "../buttons/Buttons";
@@ -89,26 +91,26 @@ export function Navbar() {
         useActive.isMobileMenuOpen ||
         useActive.isDropdownOpen ||
         useActive.isCaseStudyDropdownOpen
-          ? "bg-background"
+          ? "bg-neutral-950"
           : "bg-transparent delay-300"
-      } lg:min-h-18 lg:px-[5%] transition-colors duration-300 ease-in-out`}
+      } px-[4%] transition-colors duration-300 ease-in-out py-2 md:py-0 text-neutral-300`}
     >
-      <div className="size-full lg:flex lg:items-center lg:justify-between lg:gap-10">
+      <div className="size-full flex items-center lg:justify-between lg:gap-10">
         <div className="lg:flex lg:w-full lg:gap-4 lg:justify-between">
-          <div className="flex min-h-16 items-center justify-between px-[5%] md:min-h-18 lg:min-h-full lg:px-0">
-            <a href="#">
-              <img
-                src="https://d22po4pjz3o32e.cloudfront.net/logo-image.svg"
-                alt="Logo image"
-                className="dark:invert-100"
+          <div className="flex items-center justify-between lg:px-0">
+            <a href={HOME}>
+              <Image
+                src={logoDark}
+                alt="dark logo"
+                className="block h-8 md:h-10 w-auto"
               />
             </a>
             <button
-              className="-mr-2 flex size-12 flex-col items-center justify-center lg:hidden"
+              className="-mr-2 flex size-10 flex-col items-center justify-center lg:hidden"
               onClick={useActive.toggleMobileMenu}
             >
               <motion.span
-                className="my-[3px] h-0.5 w-6 bg-foreground"
+                className="my-[3px] h-0.5 w-6 bg-neutral-300"
                 animate={useActive.animateMobileMenuButtonSpan}
                 variants={{
                   open: { translateY: 8, transition: { delay: 0.1 } },
@@ -121,7 +123,7 @@ export function Navbar() {
                 }}
               />
               <motion.span
-                className="my-[3px] h-0.5 w-6 bg-foreground"
+                className="my-[3px] h-0.5 w-6 bg-neutral-300"
                 animate={useActive.animateMobileMenu}
                 variants={{
                   open: { width: 0, transition: { duration: 0.1 } },
@@ -132,7 +134,7 @@ export function Navbar() {
                 }}
               />
               <motion.span
-                className="my-[3px] h-0.5 w-6 bg-foreground"
+                className="my-[3px] h-0.5 w-6 bg-neutral-300"
                 animate={useActive.animateMobileMenuButtonSpan}
                 variants={{
                   open: { translateY: -8, transition: { delay: 0.1 } },
@@ -146,9 +148,9 @@ export function Navbar() {
               />
             </button>
           </div>
-          <div className="hidden lg:flex flex-row gap-1 items-center">
-            <GoDotFill className="text-foreground" />
-            <span className="text-xs text-foreground">
+          <div className="hidden lg:flex flex-row gap-3 items-center">
+            <GoDotFill className="text-neutral-300 text-[10px]" />
+            <span className="text-xs text-neutral-300">
               Rewrite the Rules
               <br />
               of Digital.
@@ -163,12 +165,12 @@ export function Navbar() {
             exit="close"
             animate={useActive.animateMobileMenu}
             transition={{ duration: 0.3 }}
-            className="overflow-auto px-[5%] lg:ml-6 lg:flex lg:items-center lg:px-0 lg:[--height-closed:auto] lg:[--height-open:auto]"
+            className="overflow-auto lg:ml-6 lg:flex lg:items-center lg:px-0 lg:[--height-closed:auto] lg:[--height-open:auto]"
           >
             <a
               href="#"
               className={`block py-3 text-md first:pt-7 lg:px-4 lg:py-6 lg:text-base first:lg:pt-6 ${
-                pathname === "/" ? "text-accentColor1" : "text-foreground"
+                pathname === "/" ? "text-accentColor1" : "text-neutral-300"
               }`}
             >
               Home
@@ -186,7 +188,7 @@ export function Navbar() {
                   className={`${
                     pathname.startsWith("/services")
                       ? "text-accentColor1"
-                      : "text-foreground"
+                      : "text-neutral-300"
                   }`}
                 >
                   Services
@@ -219,7 +221,7 @@ export function Navbar() {
                 exit="close"
                 animate={useActive.animateDropdownMenu}
                 transition={{ duration: 0.3 }}
-                className="top-full bottom-auto left-0 w-full max-w-full min-w-full overflow-hidden bg-background lg:absolute lg:w-[100vw] lg:px-[5%] lg:[--height-close:auto]"
+                className="top-full bottom-auto left-0 w-full max-w-full min-w-full overflow-hidden bg-neutral-950 lg:absolute lg:w-[100vw] lg:px-[5%] lg:[--height-close:auto]"
               >
                 <div className="mx-auto flex size-full max-w-full items-center justify-between">
                   <div className="w-full lg:flex">
@@ -236,7 +238,7 @@ export function Navbar() {
                             <LuCog className="text-xl text-accentColor1" />
                           </div>
                           <div className="flex flex-col items-start justify-center">
-                            <h5 className="font-semibold text-neutral-800 dark:text-white">
+                            <h5 className="font-semibold text-white">
                               Custom Software Solutions
                             </h5>
                             <p className="hidden text-sm md:block">
@@ -253,7 +255,7 @@ export function Navbar() {
                             <LuGlobe className="text-xl text-accentColor1" />
                           </div>
                           <div className="flex flex-col items-start justify-center">
-                            <h5 className="font-semibold text-neutral-800 dark:text-white">
+                            <h5 className="font-semibold text-white">
                               Web App Development
                             </h5>
                             <p className="hidden text-sm md:block">
@@ -270,7 +272,7 @@ export function Navbar() {
                             <LuTablet className="text-xl text-accentColor1" />
                           </div>
                           <div className="flex flex-col items-start justify-center">
-                            <h5 className="font-semibold text-neutral-800 dark:text-white">
+                            <h5 className="font-semibold text-white">
                               Social Media Marketing
                             </h5>
                             <p className="hidden text-sm md:block">
@@ -287,7 +289,7 @@ export function Navbar() {
                             <LuRocket className="text-xl text-accentColor1" />
                           </div>
                           <div className="flex flex-col items-start justify-center">
-                            <h5 className="font-semibold text-neutral-800 dark:text-white">
+                            <h5 className="font-semibold text-white">
                               Search Engine Marketing
                             </h5>
                             <p className="hidden text-sm md:block">
@@ -306,7 +308,7 @@ export function Navbar() {
                             <LuZap className="text-xl text-accentColor1" />
                           </div>
                           <div className="flex flex-col items-start justify-center">
-                            <h5 className="font-semibold text-neutral-800 dark:text-white">
+                            <h5 className="font-semibold text-white">
                               Search Engine Optimization
                             </h5>
                             <p className="hidden text-sm md:block">
@@ -323,7 +325,7 @@ export function Navbar() {
                             <LuHandshake className="text-xl text-accentColor1" />
                           </div>
                           <div className="flex flex-col items-start justify-center">
-                            <h5 className="font-semibold text-neutral-800 dark:text-white">
+                            <h5 className="font-semibold text-white">
                               Business Consultancy
                             </h5>
                             <p className="hidden text-sm md:block">
@@ -352,7 +354,7 @@ export function Navbar() {
                               />
                             </div>
                             <div className="rt-4 mt-4 flex flex-col justify-start md:mt-0">
-                              <h5 className="mb-1 font-semibold">
+                              <h5 className="mb-1 font-semibold text-white">
                                 The Rising Influence of Social Media
                               </h5>
                               <p className="text-sm">
@@ -362,7 +364,7 @@ export function Navbar() {
                               <div className="mt-1.5">
                                 <LinkButton
                                   text="Read more"
-                                  className="text-sm"
+                                  className="text-sm text-neutral-300"
                                   icon={false}
                                 />
                               </div>
@@ -380,7 +382,7 @@ export function Navbar() {
                               />
                             </div>
                             <div className="rt-4 mt-4 flex flex-col justify-start md:mt-0">
-                              <h5 className="mb-1 font-semibold text-neutral-800 dark:text-white">
+                              <h5 className="mb-1 font-semibold text-white">
                                 Is SEO Dead? Will AEO Take Over the Industry in
                                 2025?
                               </h5>
@@ -391,7 +393,7 @@ export function Navbar() {
                               <div className="mt-1.5">
                                 <LinkButton
                                   text="Read more"
-                                  className="text-sm"
+                                  className="text-sm text-neutral-300"
                                   icon={false}
                                 />
                               </div>
@@ -399,10 +401,14 @@ export function Navbar() {
                           </a>
                         </div>
                         <div className="flex items-center">
-                          <LinkButton url="/articles" text="See all articles" />
+                          <LinkButton
+                            className="text-white"
+                            url="/articles"
+                            text="See all articles"
+                          />
                         </div>
                       </div>
-                      <div className="absolute top-0 right-auto bottom-0 left-0 min-w-full bg-background-secondary lg:min-w-[100vw]" />
+                      <div className="absolute top-0 right-auto bottom-0 left-0 min-w-full bg-neutral-950-secondary lg:min-w-[100vw]" />
                     </div>
                   </div>
                 </div>
@@ -420,7 +426,7 @@ export function Navbar() {
                   className={`${
                     pathname.startsWith("/case-studies")
                       ? "text-accentColor1"
-                      : "text-foreground"
+                      : "text-neutral-300"
                   }`}
                 >
                   Case Studies
@@ -453,7 +459,7 @@ export function Navbar() {
                 exit="close"
                 animate={useActive.animateCaseStudyDropdownMenu}
                 transition={{ duration: 0.3 }}
-                className="top-full bottom-auto left-0 w-full max-w-full min-w-full overflow-hidden bg-background lg:absolute lg:w-[100vw] lg:px-[5%] lg:[--height-close:auto]"
+                className="top-full bottom-auto left-0 w-full max-w-full min-w-full overflow-hidden bg-neutral-950 lg:absolute lg:w-[100vw] lg:px-[5%] lg:[--height-close:auto]"
               >
                 <div className="mx-auto flex size-full max-w-full items-center justify-between">
                   <div className="w-full lg:flex">
@@ -470,7 +476,7 @@ export function Navbar() {
                             <LuFactory className="text-xl text-accentColor1" />
                           </div>
                           <div className="flex flex-col items-start justify-center">
-                            <h5 className="font-semibold text-neutral-800 dark:text-white">
+                            <h5 className="font-semibold text-white">
                               Comprehensive Real Estate Management
                             </h5>
                             <p className="hidden text-sm md:block">
@@ -487,7 +493,7 @@ export function Navbar() {
                             <LuStore className="text-xl text-accentColor1" />
                           </div>
                           <div className="flex flex-col items-start justify-center">
-                            <h5 className="font-semibold text-neutral-800 dark:text-white">
+                            <h5 className="font-semibold text-white">
                               Petshop E-commerce Web Application
                             </h5>
                             <p className="hidden text-sm md:block">
@@ -504,7 +510,7 @@ export function Navbar() {
                             <LuMegaphone className="text-xl text-accentColor1" />
                           </div>
                           <div className="flex flex-col items-start justify-center">
-                            <h5 className="font-semibold text-neutral-800 dark:text-white">
+                            <h5 className="font-semibold text-white">
                               Hight Performing CPC Ads Campaign
                             </h5>
                             <p className="hidden text-sm md:block">
@@ -523,7 +529,7 @@ export function Navbar() {
                             <LuGlobe className="text-xl text-accentColor1" />
                           </div>
                           <div className="flex flex-col items-start justify-center">
-                            <h5 className="font-semibold text-neutral-800 dark:text-white">
+                            <h5 className="font-semibold text-white">
                               Gymnasium Center Responsive Business Website
                             </h5>
                             <p className="hidden text-sm md:block">
@@ -540,7 +546,7 @@ export function Navbar() {
                             <LuRocket className="text-xl text-accentColor1" />
                           </div>
                           <div className="flex flex-col items-start justify-center">
-                            <h5 className="font-semibold text-neutral-800 dark:text-white">
+                            <h5 className="font-semibold text-white">
                               Brand Revival with Socila Media Strategy
                             </h5>
                             <p className="hidden text-sm md:block">
@@ -569,17 +575,18 @@ export function Navbar() {
                               />
                             </div>
                             <div className="rt-4 mt-4 flex flex-col justify-start md:mt-0">
-                              <h5 className="mb-1 font-semibold">
+                              <h5 className="mb-1 font-semibold text-white">
                                 Comprehensive Real Estate Management System
                               </h5>
                               <p className="text-sm">
-                                A powerful management system.
+                                A powerful management system for real estate
+                                professionals.
                               </p>
                               <div className="mt-1.5">
                                 <LinkButton
                                   text="Read more"
                                   icon={false}
-                                  className="text-sm"
+                                  className="text-sm text-neutral-300"
                                 />
                               </div>
                             </div>
@@ -596,7 +603,7 @@ export function Navbar() {
                               />
                             </div>
                             <div className="rt-4 mt-4 flex flex-col justify-start md:mt-0">
-                              <h5 className="mb-1 font-semibold">
+                              <h5 className="mb-1 font-semibold text-white">
                                 Gymnasium Center Responsive Business Website
                               </h5>
                               <p className="text-sm">
@@ -606,17 +613,20 @@ export function Navbar() {
                                 <LinkButton
                                   text="Read more"
                                   icon={false}
-                                  className="text-sm"
+                                  className="text-sm text-neutral-300"
                                 />
                               </div>
                             </div>
                           </a>
                         </div>
                         <div className="flex items-center">
-                          <LinkButton text="See all cases" />
+                          <LinkButton
+                            text="See all cases"
+                            className="text-white"
+                          />
                         </div>
                       </div>
-                      <div className="absolute top-0 right-auto bottom-0 left-0 min-w-full bg-background-secondary lg:min-w-[100vw]" />
+                      <div className="absolute top-0 right-auto bottom-0 left-0 min-w-full bg-neutral-950-secondary lg:min-w-[100vw]" />
                     </div>
                   </div>
                 </div>
@@ -625,7 +635,7 @@ export function Navbar() {
             <a
               href="#"
               className={`block py-3 text-md first:pt-7 lg:px-4 lg:py-6 lg:text-base first:lg:pt-6 ${
-                pathname === "/about" ? "text-accentColor1" : "text-foreground"
+                pathname === "/about" ? "text-accentColor1" : "text-neutral-300"
               }`}
             >
               About
@@ -635,7 +645,7 @@ export function Navbar() {
               className={`block py-3 text-md first:pt-7 lg:px-4 lg:py-6 lg:text-base first:lg:pt-6 ${
                 pathname === "/contact"
                   ? "text-accentColor1"
-                  : "text-foreground"
+                  : "text-neutral-300"
               }`}
             >
               Contact
@@ -643,11 +653,11 @@ export function Navbar() {
             <div className="mt-6  w-full  pb-24 lg:hidden lg:pb-0">
               <PrimaryButton
                 text="Get A Quote"
-                url="/contact"
+                url={CONTACT}
                 icon={
-                  <FaArrowRight className="group-hover:-rotate-45 transition-all duration-300 ease-in" />
+                  <FaArrowRight className="group-hover:-rotate-45 transition-all duration-300 ease-in text-sm ml-3 mt-[2px]" />
                 }
-                className="text-sm px-5 py-3"
+                className="text-sm py-3 px-4"
               />
             </div>
           </motion.div>
@@ -655,11 +665,11 @@ export function Navbar() {
         <div className="hidden lg:flex lg:gap-4">
           <PrimaryButton
             text="Get A Quote"
-            url="/contact"
+            url={CONTACT}
             icon={
-              <FaArrowRight className="group-hover:-rotate-45 transition-all duration-300 ease-in" />
+              <FaArrowRight className="group-hover:-rotate-45 transition-all duration-300 ease-in text-xs ml-2 mt-[1px]" />
             }
-            className="text-sm px-5 py-3"
+            className="text-xs px-3.5 py-2"
           />
         </div>
       </div>

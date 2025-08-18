@@ -10,23 +10,32 @@ import { LinkButton, SecondaryButton } from "../buttons/Buttons";
 export function Process() {
   return (
     <section id="process" className="px-[5%] py-10 md:py-16 lg:py-20 relative">
-      <div className="container relative z-[3]">
+      <div className=" relative z-[3]">
         <div className="mb-12 md:mb-18 lg:mb-20">
-          <div className="mx-auto max-w-3xl text-center flex flex-col items-center">
-            <p className="mb-3 font-semibold md:mb-4 text-accentColor1">
-              Process
-            </p>
-            <h2 className="max-w-2xl mb-5 text-3xl font-bold md:mb-6 md:text-4xl lg:text-5xl text-titleColor">
-              Our Seamless Project Development Journey
-            </h2>
-            <p className="md:text-md">
-              At Devion Ark, we follow a clear, collaborative, and efficient
-              process to bring your digital vision to life. From idea to launch
-              — every step is handled with precision and care to ensure results
-              that truly make an impact. We begin with an in-depth consultation
-              to understand your unique needs. Our team then crafts a tailored
-              strategy to ensure your project&apos;s success.
-            </p>
+          <div className=" flex flex-col items-center">
+            <div className="w-full flex">
+              <div className="w-full md:w-[70%] lg:w-[60%]">
+                <p className="mb-3 font-semibold md:mb-4 text-accentColor1 md:text-md lg:text-lg">
+                  Process
+                </p>
+                <h2 className="mb-5 text-3xl font-bold md:mb-6 md:text-4xl lg:text-5xl text-neutral-800 dark:text-white">
+                  Our Seamless Project Development Journey
+                </h2>
+              </div>
+            </div>
+            <div className="w-full flex justify-end">
+              <div className="w-full md:w-[70%] lg:w-[50%] pl-7 border-l-2 border-accentColor2">
+                <p className="md:text-md">
+                  At Devion Ark, we follow a clear, collaborative, and efficient
+                  process to bring your digital vision to life. From idea to
+                  launch — every step is handled with precision and care to
+                  ensure results that truly make an impact. We begin with an
+                  in-depth consultation to understand your unique needs. Our
+                  team then crafts a tailored strategy to ensure your project's
+                  success.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
         <div className="grid place-items-center gap-x-8 gap-y-12 sm:grid-cols-2 md:gap-y-16 lg:grid-cols-[1fr_1.5fr_1fr] lg:gap-x-12">
@@ -99,7 +108,7 @@ export function Process() {
           <LinkButton url="/services" text="Learn More" />
         </div>
       </div>
-      <div className="w-[25%] lg:w-[15%] aspect-square absolute z-[1] overflow-hidden top-0 left-0 scale-x-[-1]">
+      <div className="w-[25%] lg:w-[15%] aspect-square absolute z-[1] overflow-hidden top-0 right-0">
         <Image
           src={bgElement}
           alt="background element"

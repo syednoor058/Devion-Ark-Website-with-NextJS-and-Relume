@@ -9,12 +9,12 @@ import heroVerticle2 from "../../../public/images/hero-images/hero-2.3-2.jpg";
 import heroVerticle4 from "../../../public/images/hero-images/hero-3.4-1.jpg";
 import heroVerticle3 from "../../../public/images/hero-images/hero-3.4-2.jpg";
 import heroMainImg from "../../../public/images/hero-images/hero-main.jpg";
-import heroSquare1 from "../../../public/images/hero-images/hero-square-1.jpg";
-import heroSquare2 from "../../../public/images/hero-images/hero-square-2.jpg";
+import heroSquare1 from "../../../public/images/hero-images/hero-square-1.png";
+import mobileHeroImg from "../../../public/images/hero-images/mobile-hero.png";
 import { PrimaryButton, SecondaryButton } from "../buttons/Buttons";
 import { Spotlight } from "../ui/spotlight-new";
 
-export const Hero = ({ title = "", description = "" }) => {
+export const Hero = ({ description = "" }) => {
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
   const { scrollYProgress } = useScroll();
 
@@ -40,35 +40,45 @@ export const Hero = ({ title = "", description = "" }) => {
   };
 
   return (
-    <section id="home" className="relative h-[300vh]">
-      <div className="px-[5%] pt-24 md:pt-32 lg:pt-36 relative z-[5]">
+    <section
+      id="home"
+      className="relative md:h-[550vh] bg-neutral-950 pt-20 md:pt-24 lg:pt-28"
+    >
+      <div className="px-[5%] relative z-[5]">
         <div className="container">
           <div className="mx-auto w-full max-w-3xl text-center">
-            <h1 className="mb-5 text-3xl font-bold md:mb-6 md:text-4xl lg:text-5xl text-titleColor">
-              {title}
+            <h1 className="mb-5 text-3xl font-bold md:mb-6 md:text-4xl lg:text-5xl text-white">
+              Transforming Your Ideas Into{" "}
+              <span className="bg-gradient-to-tr from-accentColor2 to-accentColor1 bg-clip-text text-transparent">
+                Digital Reality
+              </span>
             </h1>
-            <p className="md:text-md">{description}</p>
+            <p className="md:text-md text-neutral-300">{description}</p>
             <div className="mt-6 flex items-center justify-center gap-x-4 md:mt-8 mb-5">
               <PrimaryButton
                 text="Get Started"
                 url="/contact"
                 icon={
-                  <FaArrowRight className="group-hover:-rotate-45 transition-all duration-300 ease-in" />
+                  <FaArrowRight className="group-hover:-rotate-45 transition-all duration-300 ease-in ml-3 text-sm" />
                 }
               />
-              <SecondaryButton text="Learn More" url="/about" />
+              <SecondaryButton
+                className="text-neutral-300 border-neutral-300"
+                text="Learn More"
+                url="/about"
+              />
             </div>
           </div>
         </div>
       </div>
 
-      <div className="sticky top-0 flex h-screen w-full items-center overflow-hidden z-[5]">
+      <div className="sticky top-0 hidden md:flex h-screen w-full items-center overflow-hidden z-[5]">
         <div className="z-10 grid h-[60vh] w-full grid-flow-col grid-cols-[25%_50%_25%]  content-center items-center justify-center md:h-[70vh] md:grid-cols-[32%_36%_32%] lg:h-[80vh]">
           <motion.div
             className="grid grid-flow-col grid-cols-1 items-center justify-items-end gap-4 justify-self-end px-4"
             style={leftImageGroup}
           >
-            <div className="relative hidden md:block md:w-[25vw] lg:w-[20vw] aspect-[2/3] overflow-hidden">
+            <div className="relative hidden md:block md:w-[25vw] lg:w-[20vw] aspect-[2/3] overflow-hidden rounded-[15px]">
               <Image
                 src={heroVerticle1}
                 alt="two colluges are discussing plan"
@@ -84,9 +94,9 @@ export const Hero = ({ title = "", description = "" }) => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="relative w-full aspect-[3/4] overflow-hidden">
+              <div className="relative w-full aspect-[3/4] overflow-hidden rounded-[15px]">
                 <Image
-                  src={heroVerticle3}
+                  src={heroVerticle4}
                   alt="industrial tall building"
                   className="w-full h-full object-cover"
                 />
@@ -95,15 +105,16 @@ export const Hero = ({ title = "", description = "" }) => {
           </motion.div>
 
           <motion.div
-            className="relative w-full h-full overflow-hidden"
+            className="relative w-full h-full overflow-hidden rounded-[15px] p-[3px]"
             style={centerImageContainer}
             transition={{ ease: "easeInOut", duration: 0.3 }}
           >
             <Image
               src={heroMainImg}
               alt="educating clients with cutting edge technology for their business growth"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover rounded-[15px] object-left inset-shadow-2xs ring-background inset-shadow-white/20 shadow-lg shadow-zinc-950/15 ring-1"
             />
+            <div className="absolute w-full h-96 bg-gradient-to-t from-neutral-950 to-transparent left-0 right-0 -bottom-[1px] z-[100]"></div>
           </motion.div>
 
           <motion.div
@@ -111,23 +122,26 @@ export const Hero = ({ title = "", description = "" }) => {
             style={rightImageGroup}
           >
             <div className="relative grid w-[40vw] grid-cols-1 grid-rows-[auto_auto] gap-4 self-center md:w-[18vw]">
-              <div className="relative w-[40vw] sm:w-auto aspect-[3/4] overflow-hidden">
+              <div className="relative w-[40vw] sm:w-auto aspect-[3/4] overflow-hidden rounded-[15px]">
                 <Image
-                  src={heroVerticle4}
+                  src={heroVerticle3}
                   alt="robotic hands using with AI"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="relative w-[40vw] sm:w-auto aspect-square overflow-hidden">
-                <Image
-                  src={heroSquare2}
-                  alt="a woman using VR"
-                  className="w-full h-full object-cover"
+              <div className="relative w-[40vw] sm:w-auto aspect-square overflow-hidden rounded-[15px]">
+                <video
+                  src="https://res.cloudinary.com/de8g5laai/video/upload/v1755074793/Untitled_design_3_sd62gd.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
                 />
+                <div className="absolute w-full h-full inset-0 bg-radial from-transparent to-neutral-950"></div>
               </div>
             </div>
 
-            <div className="relative hidden md:block md:w-[25vw] lg:w-[20vw] aspect-[2/3] overflow-hidden">
+            <div className="relative hidden md:block md:w-[25vw] lg:w-[20vw] aspect-[2/3] overflow-hidden rounded-[15px]">
               <Image
                 src={heroVerticle2}
                 alt="team members are discussing plan"
@@ -136,6 +150,13 @@ export const Hero = ({ title = "", description = "" }) => {
             </div>
           </motion.div>
         </div>
+      </div>
+      <div className="w-full aspect-[2/1] overflow-hidden relative mt-10 flex md:hidden">
+        <Image
+          src={mobileHeroImg}
+          alt="mobile hero image"
+          className="w-full h-full object-cover"
+        />
       </div>
       <div className="absolute inset-0 -z-10 mt-[100vh]" />
       <div className="w-full absolute inset-0 overflow-hidden z-[1]">

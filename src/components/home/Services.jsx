@@ -47,24 +47,33 @@ export function Services() {
   return (
     <section
       id="services-section"
-      className="px-[5%] py-10 md:py-16 lg:py-20 relative"
+      className="px-[5%] py-10 md:py-16 lg:py-20 relative text-neutral-600 bg-neutral-100 md:bg-white"
     >
-      <div className="container relative z-[3]">
-        <div className="mx-auto mb-12 w-full max-w-3xl text-center md:mb-16 lg:mb-20">
-          <p className="mb-3 font-semibold md:mb-4 text-accentColor1">
-            Innovate
-          </p>
-          <h1 className="mb-5 text-3xl font-bold md:mb-6 md:text-4xl lg:text-5xl text-neutral-800 dark:text-white">
-            Empowering Your Digital Journey
-          </h1>
-          <p className="md:text-md">
-            We're more than a digital service provider company in Bangladesh –
-            we're your business growth partners. Specializing in custom software
-            development, website solutions, and data-driven digital marketing
-            services, we empower businesses across Dhaka and beyond to outrank
-            competitors, streamline operations, and connect with their audience.
-            Whether you're a startup or an enterprise.
-          </p>
+      <div className="relative z-[3]">
+        <div className="mb-12 w-full md:mb-16 lg:mb-20">
+          <div className="w-full flex">
+            <div className="w-full md:w-[70%] lg:w-[60%]">
+              <p className="mb-3 font-semibold md:mb-4 text-accentColor2 md:text-md lg:text-lg">
+                Innovate
+              </p>
+              <h2 className="mb-5 text-3xl font-bold md:mb-6 md:text-4xl lg:text-5xl text-neutral-800">
+                Empowering Your Digital Journey
+              </h2>
+            </div>
+          </div>
+          <div className="w-full flex justify-end">
+            <div className="w-full md:w-[70%] lg:w-[50%] pl-7 border-l-3 border-accentColor1">
+              <p className="md:text-md">
+                We&apos;re more than a digital service provider company in
+                Bangladesh – we're your business growth partners. Specializing
+                in custom software development, website solutions, and
+                data-driven digital marketing services, we empower businesses
+                across Dhaka and beyond to outrank competitors, streamline
+                operations, and connect with their audience. Whether you're a
+                startup or an enterprise.
+              </p>
+            </div>
+          </div>
         </div>
         <div
           className="sticky top-0 grid grid-cols-1 gap-6 md:gap-0"
@@ -97,7 +106,7 @@ export function Services() {
                     <Image
                       src={customSoftImg}
                       alt="software development"
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover rounded-[15px]"
                     />
                   </div>
                 </Fragment>
@@ -105,31 +114,68 @@ export function Services() {
             </ConditionalRender>
             <ConditionalRender condition={renderTablet.isTablet}>
               <motion.div
-                className="static grid grid-cols-1 content-center overflow-hidden bg-gradient-to-tr from-black to-black md:sticky md:top-[10%] md:mb-[10vh] md:h-[80vh] md:grid-cols-2"
+                className="static grid grid-cols-1 content-center overflow-hidden bg-white md:sticky md:top-[10%] md:mb-[10vh] md:h-[80vh] md:grid-cols-2 rounded-[15px]  custom-shadow"
                 style={{ scale: useScroll.calculateScale(0, 6) }}
               >
                 <Fragment>
-                  <div className="order-first flex flex-col justify-center p-6 md:p-8 lg:p-12 md:order-first">
-                    <p className="mb-2 font-semibold text-accentColor2 md:text-xl">
+                  <div className="order-first flex flex-col justify-center p-6 md:p-8 lg:p-12 md:order-first bg-neutral-100">
+                    <p className="mb-2 font-semibold text-accentColor1 md:text-lg xl:text-xl">
                       Tech Solution
                     </p>
-                    <h2 className="rb-5 mb-5 text-4xl leading-[1.2] font-bold md:mb-6 md:text-5xl lg:text-6xl text-white">
+                    <h2 className="rb-5 mb-3 xl:mb-5 text-4xl font-bold  md:text-3xl lg:text-4xl xl:text-5xl text-neutral-800">
                       Custom Software Solutions
                     </h2>
-                    <p className="text-neutral-300 md:text-md">
+                    <p className="text-neutral-600 xl:text-md">
                       Every business is unique. We build custom tools that
                       improve efficiency, automate tasks, and solve real
                       challenges.
                     </p>
-                    <div className="mt-6 flex items-center gap-x-4 md:mt-8">
+                    <div className="w-full flex flex-wrap gap-1 mt-3 xl:mt-5 md:mt-6">
+                      <div className="flex">
+                        <div className="p-[1px] bg-gradient-to-tr from-accentColor1 to accent-accentColor2 rounded-md flex">
+                          <div className="px-3 py-1 bg-neutral-800 text-white  rounded-md text-xs">
+                            E-commerce App
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex">
+                        <div className=" p-[1px] bg-gradient-to-tr from-accentColor1 to accent-accentColor2 rounded-md flex">
+                          <div className="px-3 py-1.5 bg-neutral-800 text-white  rounded-md text-xs">
+                            Management System
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex">
+                        <div className=" p-[1px] bg-gradient-to-tr from-accentColor1 to accent-accentColor2 rounded-md flex">
+                          <div className="px-3 py-1.5 bg-neutral-800 text-white  rounded-md text-xs">
+                            Cloud Computing
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex">
+                        <div className=" p-[1px] bg-gradient-to-tr from-accentColor1 to accent-accentColor2 rounded-md flex">
+                          <div className="px-3 py-1.5 bg-neutral-800 text-white  rounded-md text-xs">
+                            Agentic AI
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex">
+                        <div className=" p-[1px] bg-gradient-to-tr from-accentColor1 to accent-accentColor2 rounded-md flex">
+                          <div className="px-3 py-1.5 bg-neutral-800 text-white  rounded-md text-xs">
+                            Software As A Service
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="mt-6 flex items-center gap-x-4 md:mt-5 xl:mt-8">
                       <SecondaryButton
                         url="/services/custom-software-solutions"
                         text="Learn More"
-                        className="border-neutral-300 text-neutral-300"
+                        className="border-neutral-600 text-neutral-600"
                       />
                     </div>
                   </div>
-                  <div className="order-last flex flex-col items-center justify-center md:order-last">
+                  <div className="order-last flex flex-col items-center justify-center md:order-last relative h-full">
                     <Image
                       src={customSoftImg}
                       alt="custom software development development"
@@ -173,17 +219,20 @@ export function Services() {
                 </Fragment>
               </div>
             </ConditionalRender>
-            <ConditionalRender condition={renderTablet.isTablet}>
+            <ConditionalRender
+              condition={renderTablet.isTablet}
+              className="bg-white"
+            >
               <motion.div
-                className="static grid grid-cols-1 content-center overflow-hidden bg-neutral-100 md:sticky md:top-[10%] md:mb-[10vh] md:h-[80vh] md:grid-cols-2"
+                className="static grid grid-cols-1 content-center overflow-hidden bg-white  rounded-[15px] custom-shadow md:sticky md:top-[10%] md:mb-[10vh] md:h-[80vh] md:grid-cols-2 "
                 style={{ scale: useScroll.calculateScale(1, 6) }}
               >
                 <Fragment>
-                  <div className="order-first flex flex-col justify-center p-6 md:p-8 lg:p-12 md:order-last">
-                    <p className="mb-2 font-semibold text-accentColor2 md:text-xl">
+                  <div className="order-first flex flex-col justify-center p-6 md:p-8 lg:p-12 md:order-last bg-neutral-100">
+                    <p className="mb-2 font-semibold text-accentColor1 md:text-lg xl:text-xl">
                       Tech Solution
                     </p>
-                    <h2 className="rb-5 mb-5 text-4xl leading-[1.2] font-bold md:mb-6 md:text-5xl lg:text-6xl text-neutral-800">
+                    <h2 className="rb-5 mb-3 xl:mb-5 text-4xl font-bold md:text-3xl lg:text-4xl xl:text-5xl text-neutral-800">
                       Web Application Development
                     </h2>
                     <p className="text-neutral-600 md:text-md">
@@ -191,7 +240,51 @@ export function Services() {
                       operations, boost performance, and deliver smooth user
                       experiences.
                     </p>
-                    <div className="mt-6 flex items-center gap-x-4 md:mt-8">
+                    <div className="w-full flex flex-wrap gap-1 mt-3 xl:mt-6">
+                      <div className="flex">
+                        <div className="p-[1px] bg-gradient-to-tr from-accentColor1 to accent-accentColor2 rounded-md flex">
+                          <div className="px-3 py-1.5 bg-neutral-800 text-white  rounded-md text-xs">
+                            Business Site
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex">
+                        <div className=" p-[1px] bg-gradient-to-tr from-accentColor1 to accent-accentColor2 rounded-md flex">
+                          <div className="px-3 py-1.5 bg-neutral-800 text-white  rounded-md text-xs">
+                            Personal Porfolio
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex">
+                        <div className=" p-[1px] bg-gradient-to-tr from-accentColor1 to accent-accentColor2 rounded-md flex">
+                          <div className="px-3 py-1.5 bg-neutral-800 text-white  rounded-md text-xs">
+                            News Portal
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex">
+                        <div className=" p-[1px] bg-gradient-to-tr from-accentColor1 to accent-accentColor2 rounded-md flex">
+                          <div className="px-3 py-1.5 bg-neutral-800 text-white  rounded-md text-xs">
+                            Wordpress
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex">
+                        <div className=" p-[1px] bg-gradient-to-tr from-accentColor1 to accent-accentColor2 rounded-md flex">
+                          <div className="px-3 py-1.5 bg-neutral-800 text-white  rounded-md text-xs">
+                            Responsive
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex">
+                        <div className=" p-[1px] bg-gradient-to-tr from-accentColor1 to accent-accentColor2 rounded-md flex">
+                          <div className="px-3 py-1.5 bg-neutral-800 text-white  rounded-md text-xs">
+                            Cross-browser Compatibility
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="mt-5 flex items-center gap-x-4 xl:mt-8">
                       <SecondaryButton
                         url="/services/web-application-development"
                         text="Learn More"
@@ -245,27 +338,64 @@ export function Services() {
             </ConditionalRender>
             <ConditionalRender condition={renderTablet.isTablet}>
               <motion.div
-                className="static grid grid-cols-1 content-center overflow-hidden bg-accentColor1 md:sticky md:top-[10%] md:mb-[10vh] md:h-[80vh] md:grid-cols-2"
+                className="static grid grid-cols-1 content-center overflow-hidden md:sticky md:top-[10%] md:mb-[10vh] md:h-[80vh] md:grid-cols-2 bg-white  rounded-[15px] custom-shadow"
                 style={{ scale: useScroll.calculateScale(2, 6) }}
               >
                 <Fragment>
-                  <div className="order-first flex flex-col justify-center p-6 md:p-8 lg:p-12 md:order-first">
-                    <p className="mb-2 font-semibold text-yellow-300 md:text-xl">
+                  <div className="order-first flex flex-col justify-center p-6 md:p-8 lg:p-12 md:order-first bg-neutral-100">
+                    <p className="mb-2 font-semibold text-accentColor1 md:text-lg xl:text-xl">
                       Marketing Solution
                     </p>
-                    <h2 className="rb-5 mb-5 text-4xl leading-[1.2] font-bold md:mb-6 md:text-5xl lg:text-6xl text-white">
+                    <h2 className="rb-5 mb-3 xl:mb-5 text-4xl font-bold md:text-3xl lg:text-4xl xl:text-5xl text-neutral-800">
                       Social Media Marketing
                     </h2>
-                    <p className="text-neutral-200 md:text-md">
+                    <p className="text-neutral-600 md:text-md">
                       Create brand awareness, engage your audience, and drive
                       conversions with platform-specific social media
                       strategies.
                     </p>
-                    <div className="mt-6 flex items-center gap-x-4 md:mt-8">
+                    <div className="w-full flex flex-wrap gap-1 mt-3 xl:mt-6">
+                      <div className="flex">
+                        <div className=" p-[1px] bg-gradient-to-tr from-accentColor1 to accent-accentColor2 rounded-md flex">
+                          <div className="px-3 py-1.5 bg-neutral-800 text-white  rounded-md text-xs">
+                            Page Setup
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex">
+                        <div className=" p-[1px] bg-gradient-to-tr from-accentColor1 to accent-accentColor2 rounded-md flex">
+                          <div className="px-3 py-1.5 bg-neutral-800 text-white  rounded-md text-xs">
+                            Organic Promotions
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex">
+                        <div className=" p-[1px] bg-gradient-to-tr from-accentColor1 to accent-accentColor2 rounded-md flex">
+                          <div className="px-3 py-1.5 bg-neutral-800 text-white  rounded-md text-xs">
+                            Ads Campaign
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex">
+                        <div className=" p-[1px] bg-gradient-to-tr from-accentColor1 to accent-accentColor2 rounded-md flex">
+                          <div className="px-3 py-1.5 bg-neutral-800 text-white  rounded-md text-xs">
+                            Optimization
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex">
+                        <div className="p-[1px] bg-gradient-to-tr from-accentColor1 to accent-accentColor2 rounded-md flex">
+                          <div className="px-3 py-1.5 bg-neutral-800 text-white  rounded-md text-xs">
+                            Business Suite
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="mt-5 flex items-center gap-x-4 xl:mt-8">
                       <SecondaryButton
                         url="/services/social-media-marketing"
                         text="Learn More"
-                        className="border-neutral-200 text-neutral-200"
+                        className="border-neutral-600 text-neutral-600"
                       />
                     </div>
                   </div>
@@ -316,27 +446,64 @@ export function Services() {
             </ConditionalRender>
             <ConditionalRender condition={renderTablet.isTablet}>
               <motion.div
-                className="static grid grid-cols-1 content-center overflow-hidden bg-black md:sticky md:top-[10%] md:mb-[10vh] md:h-[80vh] md:grid-cols-2"
+                className="static grid grid-cols-1 content-center overflow-hidden md:sticky md:top-[10%] md:mb-[10vh] md:h-[80vh] md:grid-cols-2 bg-white rounded-[15px] custom-shadow"
                 style={{ scale: useScroll.calculateScale(3, 6) }}
               >
                 <Fragment>
-                  <div className="order-first flex flex-col justify-center p-6 md:p-8 lg:p-12 md:order-last">
-                    <p className="mb-2 font-semibold text-accentColor2 md:text-xl">
+                  <div className="order-first flex flex-col justify-center p-6 md:p-8 lg:p-12 md:order-last bg-neutral-100">
+                    <p className="mb-2 font-semibold text-accentColor1 md:text-lg xl:text-xl">
                       Digital Growth Solution
                     </p>
-                    <h2 className="rb-5 mb-5 text-4xl leading-[1.2] font-bold md:mb-6 md:text-5xl lg:text-6xl text-white">
+                    <h2 className="rb-5 mb-3 text-4xl font-bold xl:mb-6 md:text-3xl lg:text-4xl xl:text-5xl text-neutral-800">
                       Search Engine Optimization
                     </h2>
-                    <p className="text-neutral-200 md:text-md">
+                    <p className="text-neutral-600 md:text-md">
                       Rank higher on search engines with SEO strategies that
                       improve visibility, grow traffic, and attract the right
                       leads.
                     </p>
-                    <div className="mt-6 flex items-center gap-x-4 md:mt-8">
+                    <div className="w-full flex flex-wrap gap-1 mt-3 xl:mt-6">
+                      <div className="flex">
+                        <div className=" p-[1px] bg-gradient-to-tr from-accentColor1 to accent-accentColor2 rounded-md flex">
+                          <div className="px-3 py-1.5 bg-neutral-800 text-white  rounded-md text-xs">
+                            On-page SEO
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex">
+                        <div className=" p-[1px] bg-gradient-to-tr from-accentColor1 to accent-accentColor2 rounded-md flex">
+                          <div className="px-3 py-1.5 bg-neutral-800 text-white  rounded-md text-xs">
+                            Off-page SEO
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex">
+                        <div className=" p-[1px] bg-gradient-to-tr from-accentColor1 to accent-accentColor2 rounded-md flex">
+                          <div className="px-3 py-1.5 bg-neutral-800 text-white  rounded-md text-xs">
+                            Keyword Research
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex">
+                        <div className=" p-[1px] bg-gradient-to-tr from-accentColor1 to accent-accentColor2 rounded-md flex">
+                          <div className="px-3 py-1.5 bg-neutral-800 text-white  rounded-md text-xs">
+                            Technical SEO
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex">
+                        <div className="p-[1px] bg-gradient-to-tr from-accentColor1 to accent-accentColor2 rounded-md flex">
+                          <div className="px-3 py-1.5 bg-neutral-800 text-white  rounded-md text-xs">
+                            Meta Tags
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="mt-5 flex items-center gap-x-4 xl:mt-8">
                       <SecondaryButton
                         url="/services/web-application-development"
                         text="Learn More"
-                        className="border-neutral-200 text-neutral-200"
+                        className="border-neutral-600 text-neutral-600"
                       />
                     </div>
                   </div>
@@ -386,15 +553,15 @@ export function Services() {
             </ConditionalRender>
             <ConditionalRender condition={renderTablet.isTablet}>
               <motion.div
-                className="static grid grid-cols-1 content-center overflow-hidden bg-neutral-100 md:sticky md:top-[10%] md:mb-[10vh] md:h-[80vh] md:grid-cols-2"
+                className="static grid grid-cols-1 content-center overflow-hidden md:sticky md:top-[10%] md:mb-[10vh] md:h-[80vh] md:grid-cols-2 bg-white custom-shadow rounded-[15px]"
                 style={{ scale: useScroll.calculateScale(4, 6) }}
               >
                 <Fragment>
-                  <div className="order-first flex flex-col justify-center p-6 md:p-8 lg:p-12 md:order-first">
-                    <p className="mb-2 font-semibold text-accentColor1 md:text-xl">
+                  <div className="order-first flex flex-col justify-center p-6 md:p-8 lg:p-12 md:order-first bg-neutral-100">
+                    <p className="mb-2 font-semibold text-accentColor1 md:text-lg xl:text-xl">
                       Marketing Solution
                     </p>
-                    <h2 className="rb-5 mb-5 text-4xl leading-[1.2] font-bold md:mb-6 md:text-5xl lg:text-6xl text-neutral-800">
+                    <h2 className="rb-5 mb-3 text-4xl leading-[1.2] font-bold xl:mb-6 md:text-3xl lg:text-4xl xl:text-5xl text-neutral-800">
                       Search Engine Marketing
                     </h2>
                     <p className="text-neutral-600 md:text-md">
@@ -402,7 +569,44 @@ export function Services() {
                       instant traffic, boost reach, and deliver measurable
                       results.
                     </p>
-                    <div className="mt-6 flex items-center gap-x-4 md:mt-8">
+                    <div className="w-full flex flex-wrap gap-1 mt-3 xl:mt-6">
+                      <div className="flex">
+                        <div className=" p-[1px] bg-gradient-to-tr from-accentColor1 to accent-accentColor2 rounded-md flex">
+                          <div className="px-3 py-1.5 bg-neutral-800 text-white  rounded-md text-xs">
+                            Google My Business
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex">
+                        <div className=" p-[1px] bg-gradient-to-tr from-accentColor1 to accent-accentColor2 rounded-md flex">
+                          <div className="px-3 py-1.5 bg-neutral-800 text-white  rounded-md text-xs">
+                            Organic Optimization
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex">
+                        <div className=" p-[1px] bg-gradient-to-tr from-accentColor1 to accent-accentColor2 rounded-md flex">
+                          <div className="px-3 py-1.5 bg-neutral-800 text-white  rounded-md text-xs">
+                            Keyword Research
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex">
+                        <div className=" p-[1px] bg-gradient-to-tr from-accentColor1 to accent-accentColor2 rounded-md flex">
+                          <div className="px-3 py-1.5 bg-neutral-800 text-white  rounded-md text-xs">
+                            Audience Research
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex">
+                        <div className="p-[1px] bg-gradient-to-tr from-accentColor1 to accent-accentColor2 rounded-md flex">
+                          <div className="px-3 py-1.5 bg-neutral-800 text-white  rounded-md text-xs">
+                            Ads Campaign
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="mt-5 flex items-center gap-x-4 xl:mt-8">
                       <SecondaryButton
                         url="/services/social-media-marketing"
                         text="Learn More"
@@ -456,26 +660,63 @@ export function Services() {
             </ConditionalRender>
             <ConditionalRender condition={renderTablet.isTablet}>
               <motion.div
-                className="static grid grid-cols-1 content-center overflow-hidden bg-accentColor1 md:sticky md:top-[10%] md:mb-[10vh] md:h-[80vh] md:grid-cols-2"
+                className="static grid grid-cols-1 content-center overflow-hidden md:sticky md:top-[10%] md:mb-[10vh] md:h-[80vh] md:grid-cols-2 bg-white rounded-[15px] custom-shadow"
                 style={{ scale: useScroll.calculateScale(5, 6) }}
               >
                 <Fragment>
-                  <div className="order-first flex flex-col justify-center p-6 md:p-8 lg:p-12 md:order-last">
-                    <p className="mb-2 font-semibold text-yellow-400 md:text-xl">
+                  <div className="order-first flex flex-col justify-center p-6 md:p-8 lg:p-12 md:order-last bg-neutral-100">
+                    <p className="mb-2 font-semibold text-accentColor1 md:text-lg xl:text-xl">
                       Business Development
                     </p>
-                    <h2 className="rb-5 mb-5 text-4xl leading-[1.2] font-bold md:mb-6 md:text-5xl lg:text-6xl text-white">
+                    <h2 className="rb-5 mb-3 text-4xl font-bold xl:mb-6 md:text-3xl lg:text-4xl xl:text-5xl text-neutral-800">
                       Business Consultancy
                     </h2>
-                    <p className="text-neutral-200 md:text-md">
+                    <p className="text-neutral-600 md:text-md">
                       Get expert digital guidance to refine your strategy,
                       optimize operations, and scale your business confidently.
                     </p>
-                    <div className="mt-6 flex items-center gap-x-4 md:mt-8">
+                    <div className="w-full flex flex-wrap gap-1 mt-3 xl:mt-6">
+                      <div className="flex">
+                        <div className=" p-[1px] bg-gradient-to-tr from-accentColor1 to accent-accentColor2 rounded-md flex">
+                          <div className="px-3 py-1.5 bg-neutral-800 text-white  rounded-md text-xs">
+                            Competitor Analysis
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex">
+                        <div className=" p-[1px] bg-gradient-to-tr from-accentColor1 to accent-accentColor2 rounded-md flex">
+                          <div className="px-3 py-1.5 bg-neutral-800 text-white  rounded-md text-xs">
+                            Marketing Planning
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex">
+                        <div className=" p-[1px] bg-gradient-to-tr from-accentColor1 to accent-accentColor2 rounded-md flex">
+                          <div className="px-3 py-1.5 bg-neutral-800 text-white  rounded-md text-xs">
+                            Strategy Discuss
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex">
+                        <div className=" p-[1px] bg-gradient-to-tr from-accentColor1 to accent-accentColor2 rounded-md flex">
+                          <div className="px-3 py-1.5 bg-neutral-800 text-white  rounded-md text-xs">
+                            Budget Optimization
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex">
+                        <div className=" p-[1px] bg-gradient-to-tr from-accentColor1 to accent-accentColor2 rounded-md flex">
+                          <div className="px-3 py-1.5 bg-neutral-800 text-white  rounded-md text-xs">
+                            24/7 Support
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="mt-5 flex items-center gap-x-4 xl:mt-8">
                       <SecondaryButton
                         url="/services/web-application-development"
                         text="Learn More"
-                        className="border-neutral-200 text-neutral-200"
+                        className="border-neutral-600 text-neutral-600"
                       />
                     </div>
                   </div>

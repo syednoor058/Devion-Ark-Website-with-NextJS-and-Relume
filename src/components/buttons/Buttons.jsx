@@ -8,17 +8,17 @@ export function PrimaryButton({ text = "", url = "#", className = "", icon }) {
   return (
     <Link
       href={url}
-      className="inline-block transition-all duration-300 ease-in group overflow-hidden relative rounded-xs bg-gradient-to-bl from-accentColor1 to-accentColor2 text-white"
+      className="inline-block transition-all duration-300 ease-in group overflow-hidden relative bg-gradient-to-bl from-accentColor1 to-accentColor2 text-white rounded-full"
     >
       <GlareHover
         glareOpacity={0.4}
         className={cn(
-          "relative z-[5] flex flex-row items-center whitespace-nowrap px-6 py-4 leading-none",
+          "relative z-[5] flex flex-row items-center whitespace-nowrap leading-none px-5 py-3",
           className
         )}
       >
         <TextAnimation text={text} />
-        {icon && <span className="ml-3">{icon}</span>}
+        {icon && <span className="">{icon}</span>}
       </GlareHover>
     </Link>
   );
@@ -29,7 +29,7 @@ export function SecondaryButton({ text = "", url = "#", className = "" }) {
     <Link
       href={url}
       className={cn(
-        "inline-block border border-borderColor text-foreground leading-none px-6 py-4 rounded-xs group",
+        "inline-block border border-borderColor text-foreground leading-none px-5 py-3 group rounded-full",
         className
       )}
     >
