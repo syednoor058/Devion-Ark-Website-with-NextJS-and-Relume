@@ -8,7 +8,7 @@ import {
   BiLogoYoutube,
 } from "react-icons/bi";
 import { FaXTwitter } from "react-icons/fa6";
-import { LinkButton, PrimaryButton } from "../buttons/Buttons";
+import { LinkButton, SubscribeButton } from "../buttons/Buttons";
 
 const useForm = () => {
   const [email, setEmail] = useState("");
@@ -31,16 +31,16 @@ export function Footer() {
   return (
     <footer
       id="footer"
-      className="px-[5%] pt-12 md:pt-18 lg:pt-20 pb-6 md:pb-8 lg:pb-10 bg-neutral-100 dark:bg-black"
+      className="px-[5%] pt-12 md:pt-18 lg:pt-20 pb-6 md:pb-8 lg:pb-10 bg-black text-neutral-300"
     >
       <div className="container">
-        <div className="grid grid-cols-1 gap-x-[8vw] gap-y-12 pb-12 md:gap-y-16 md:pb-18 lg:grid-cols-[0.75fr_1fr] lg:gap-y-4 lg:pb-20">
+        <div className="grid grid-cols-1 gap-x-[8vw] gap-y-12 pb-7 md:gap-y-16 md:pb-10 lg:grid-cols-[0.75fr_1fr] lg:gap-y-4 lg:pb-14">
           <div className="flex flex-col">
             <a href="#" className="mb-5 md:mb-6">
               <img
                 src="https://d22po4pjz3o32e.cloudfront.net/logo-image.svg"
                 alt="Logo image"
-                className="inline-block dark:invert-100"
+                className="inline-block invert-100"
               />
             </a>
             <p className="mb-5 md:mb-6">
@@ -49,7 +49,7 @@ export function Footer() {
             </p>
             <div className="w-full max-w-md">
               <form
-                className="mb-3 grid grid-cols-1 gap-x-4 gap-y-3 sm:grid-cols-[1fr_max-content] md:gap-y-4"
+                className="mb-3 grid gap-x-2 gap-y-2 grid-cols-[1fr_max-content] md:gap-y-2"
                 onSubmit={formState.handleSubmit}
               >
                 <input
@@ -58,126 +58,176 @@ export function Footer() {
                   placeholder="Enter your email"
                   value={formState.email}
                   onChange={formState.handleSetEmail}
-                  className="border border-borderColor px-5 bg-transparent placeholder:text-neutral-400 dark:placeholder:text-neutral-700"
+                  className="border border-neutral-500 px-5 bg-transparent placeholder:text-neutral-500 rounded-full py-3"
                 />
-                <PrimaryButton
+                <SubscribeButton
                   url="#"
                   text="Subscribe"
-                  className="bg-neutral-950 dark:bg-white text-white dark:text-neutral-800"
+                  className="font-bold"
                 />
               </form>
-              <p className="text-xs">
+              <p className="text-xs pt-1">
                 * By subscribing, you consent to our Privacy Policy and agree to
                 receive updates.
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-1 items-start gap-y-10 sm:grid-cols-3 sm:gap-x-6 md:gap-x-8 md:gap-y-4">
+          <div className="grid grid-cols-1 items-start gap-y-5 sm:grid-cols-3 sm:gap-x-6 md:gap-x-8 md:gap-y-4">
             <div className="flex flex-col items-start justify-start">
-              <h2 className="mb-3 font-semibold md:mb-4 text-titleColor">
+              <h2 className="mb-2 font-semibold md:mb-4 text-white">
                 Quick Links
               </h2>
               <ul>
-                <li className="pt-2 text-sm lg:text-base">
-                  <LinkButton url="/" text="Homepage" icon={false} />
+                <li className=" text-sm lg:text-base">
+                  <LinkButton
+                    className="text-neutral-300"
+                    url="/"
+                    text="Homepage"
+                    icon={false}
+                  />
                 </li>
-                <li className="pt-2 text-sm lg:text-base">
-                  <LinkButton url="/about" text="About Us" icon={false} />
+                <li className="pt-1 text-sm lg:text-base">
+                  <LinkButton
+                    className="text-neutral-300"
+                    url="/about"
+                    text="About Us"
+                    icon={false}
+                  />
                 </li>
-                <li className="pt-2 text-sm lg:text-base">
-                  <LinkButton url="/services" text="Services" icon={false} />
+                <li className="pt-1 text-sm lg:text-base">
+                  <LinkButton
+                    className="text-neutral-300"
+                    url="/services"
+                    text="Services"
+                    icon={false}
+                  />
                 </li>
-                <li className="pt-2 text-sm lg:text-base">
-                  <LinkButton url="/articles" text="Articles" icon={false} />
+                <li className="pt-1 text-sm lg:text-base">
+                  <LinkButton
+                    className="text-neutral-300"
+                    url="/articles"
+                    text="Articles"
+                    icon={false}
+                  />
                 </li>
-                <li className="pt-2 text-sm lg:text-base">
-                  <LinkButton url="/contact" text="Contact Us" icon={false} />
+                <li className="pt-1 text-sm lg:text-base">
+                  <LinkButton
+                    className="text-neutral-300"
+                    url="/contact"
+                    text="Contact Us"
+                    icon={false}
+                  />
                 </li>
               </ul>
             </div>
             <div className="flex flex-col items-start justify-start">
-              <h2 className="mb-3 font-semibold md:mb-4 text-titleColor">
+              <h2 className="mb-2 font-semibold md:mb-4 text-white">
                 Resources
               </h2>
               <ul>
-                <li className="pt-2 text-sm lg:text-base">
+                <li className="text-sm lg:text-base">
                   <LinkButton
+                    className="text-neutral-300"
                     url="/case-studies"
                     text="Case Studies"
                     icon={false}
                   />
                 </li>
-                <li className="pt-2 text-sm lg:text-base">
-                  <LinkButton url="/#faq" text="FAQ" icon={false} />
-                </li>
-                <li className="pt-2 text-sm lg:text-base">
+                <li className="pt-1 text-sm lg:text-base">
                   <LinkButton
+                    className="text-neutral-300"
+                    url="/#faq"
+                    text="FAQ"
+                    icon={false}
+                  />
+                </li>
+                <li className="pt-1 text-sm lg:text-base">
+                  <LinkButton
+                    className="text-neutral-300"
                     url="/#testimonials"
                     text="Testimonials"
                     icon={false}
                   />
                 </li>
-                <li className="pt-2 text-sm lg:text-base">
-                  <LinkButton url="/" text="Career" icon={false} />
+                <li className="pt-1 text-sm lg:text-base">
+                  <LinkButton
+                    className="text-neutral-300"
+                    url="/"
+                    text="Career"
+                    icon={false}
+                  />
                 </li>
-                <li className="pt-2 text-sm lg:text-base">
-                  <LinkButton url="/supports" text="Supports" icon={false} />
+                <li className="pt-1 text-sm lg:text-base">
+                  <LinkButton
+                    className="text-neutral-300"
+                    url="/supports"
+                    text="Supports"
+                    icon={false}
+                  />
                 </li>
               </ul>
             </div>
             <div className="flex flex-col items-start justify-start">
-              <h2 className="mb-3 font-semibold md:mb-4 text-titleColor">
-                Connect With Us
-              </h2>
+              <h2 className="mb-2 font-semibold md:mb-4 text-white">Legals</h2>
               <ul className="flex flex-col items-start">
-                <li className="py-2 text-sm lg:text-base">
-                  <a href="#" className="flex items-center gap-3">
-                    <BiLogoFacebookCircle className="size-6" />
-                    <span>Facebook</span>
-                  </a>
+                <li className="text-sm lg:text-base">
+                  <LinkButton
+                    className="text-neutral-300"
+                    url="/case-studies"
+                    text="Privacy Policy"
+                    icon={false}
+                  />
                 </li>
-                <li className="py-2 text-sm lg:text-base">
-                  <a href="#" className="flex items-center gap-3">
-                    <BiLogoInstagram className="size-6" />
-                    <span>Instagram</span>
-                  </a>
+                <li className="pt-1 text-sm lg:text-base">
+                  <LinkButton
+                    className="text-neutral-300"
+                    url="/#faq"
+                    text="Terms of Service"
+                    icon={false}
+                  />
                 </li>
-                <li className="py-2 text-sm lg:text-base">
-                  <a href="#" className="flex items-center gap-3">
-                    <FaXTwitter className="size-6 p-0.5" />
-                    <span>X</span>
-                  </a>
-                </li>
-                <li className="py-2 text-sm lg:text-base">
-                  <a href="#" className="flex items-center gap-3">
-                    <BiLogoLinkedinSquare className="size-6" />
-                    <span>LinkedIn</span>
-                  </a>
-                </li>
-                <li className="py-2 text-sm lg:text-base">
-                  <a href="#" className="flex items-center gap-3">
-                    <BiLogoYoutube className="size-6" />
-                    <span>YouTube</span>
-                  </a>
+                <li className="pt-1 text-sm lg:text-base">
+                  <LinkButton
+                    className="text-neutral-300"
+                    url="/#testimonials"
+                    text="Cookies Policy"
+                    icon={false}
+                  />
                 </li>
               </ul>
             </div>
           </div>
         </div>
-        <div className="h-px w-full bg-neutral-300 dark:bg-neutral-800" />
+        <div className="h-px w-full bg-neutral-800" />
         <div className="flex flex-col-reverse items-start justify-between pt-6 pb-4 text-sm md:flex-row md:items-center md:pt-8 md:pb-0">
           <p className="mt-6 md:mt-0">
             © 2024-2025 Devion Ark Digital Solutions. All rights reserved.
           </p>
-          <ul className="grid grid-flow-row grid-cols-[max-content] justify-center gap-y-4 text-sm md:grid-flow-col md:gap-x-6 md:gap-y-0">
+          <ul className="grid justify-center text-sm grid-flow-col gap-x-6 gap-y-0">
             <li className="underline">
-              <a href="#">Privacy Policy</a>
+              <a href="#">
+                <BiLogoFacebookCircle className="size-6" />
+              </a>
             </li>
             <li className="underline">
-              <a href="#">Terms of Service</a>
+              <a href="#">
+                <BiLogoInstagram className="size-6" />
+              </a>
             </li>
             <li className="underline">
-              <a href="#">Cookie Settings</a>
+              <a href="#">
+                <FaXTwitter className="size-6 p-0.5" />
+              </a>
+            </li>
+            <li className="underline">
+              <a href="#">
+                <BiLogoLinkedinSquare className="size-6" />
+              </a>
+            </li>
+            <li className="underline">
+              <a href="#">
+                <BiLogoYoutube className="size-6" />
+              </a>
             </li>
           </ul>
         </div>

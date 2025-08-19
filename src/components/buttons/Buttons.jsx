@@ -62,3 +62,17 @@ export function LinkButton({
     </Link>
   );
 }
+
+export function SubscribeButton({ text = "", url = "#", className = "" }) {
+  return (
+    <Link
+      href={url}
+      className={cn(
+        "transition-all duration-300 ease-in group overflow-hidden relative bg-white text-neutral-700 rounded-full px-5 py-2.5 flex justify-center items-center",
+        className
+      )}
+    >
+      <TextAnimation text={text} />
+    </Link>
+  );
+}

@@ -10,7 +10,9 @@ import semImg from "../../../public/images/services/sem.jpg";
 import seoImg from "../../../public/images/services/seo.jpg";
 import socialMarketingImg from "../../../public/images/services/social-marketing.jpg";
 import webDevImg from "../../../public/images/services/web-dev.jpg";
+import bgElement from "../../../public/images/shapes/bg-elem-2.png";
 import { SecondaryButton } from "../buttons/Buttons";
+
 const ConditionalRender = ({ condition, children }) => {
   return condition ? <>{children}</> : null;
 };
@@ -47,13 +49,13 @@ export function Services() {
   return (
     <section
       id="services-section"
-      className="px-[5%] py-10 md:py-16 lg:py-20 relative text-neutral-600 bg-neutral-100 md:bg-white"
+      className="px-[5%] py-10 md:py-16 lg:py-20 text-neutral-600 bg-neutral-100 md:bg-white relative"
     >
       <div className="relative z-[3]">
         <div className="mb-12 w-full md:mb-16 lg:mb-20">
           <div className="w-full flex">
             <div className="w-full md:w-[70%] lg:w-[60%]">
-              <p className="mb-3 font-semibold md:mb-4 text-accentColor2 md:text-md lg:text-lg">
+              <p className="mb-3 font-semibold md:mb-4 md:text-md lg:text-lg relative z-[3] bg-gradient-to-tr from-accentColor1 to-accentColor2 bg-clip-text text-transparent">
                 Innovate
               </p>
               <h2 className="mb-5 text-3xl font-bold md:mb-6 md:text-4xl lg:text-5xl text-neutral-800">
@@ -114,7 +116,7 @@ export function Services() {
             </ConditionalRender>
             <ConditionalRender condition={renderTablet.isTablet}>
               <motion.div
-                className="static grid grid-cols-1 content-center overflow-hidden bg-white md:sticky md:top-[10%] md:mb-[10vh] md:h-[80vh] md:grid-cols-2 rounded-[15px]  custom-shadow"
+                className="static grid grid-cols-1 content-center overflow-hidden bg-white md:sticky md:top-[10%] md:mb-[10vh] md:h-[80vh] md:grid-cols-2 rounded-[15px] custom-shadow border-t-2 border-neutral-200"
                 style={{ scale: useScroll.calculateScale(0, 6) }}
               >
                 <Fragment>
@@ -224,7 +226,7 @@ export function Services() {
               className="bg-white"
             >
               <motion.div
-                className="static grid grid-cols-1 content-center overflow-hidden bg-white  rounded-[15px] custom-shadow md:sticky md:top-[10%] md:mb-[10vh] md:h-[80vh] md:grid-cols-2 "
+                className="static grid grid-cols-1 content-center overflow-hidden bg-white  rounded-[15px] custom-shadow md:sticky md:top-[10%] md:mb-[10vh] md:h-[80vh] md:grid-cols-2 border-t-2 border-neutral-200"
                 style={{ scale: useScroll.calculateScale(1, 6) }}
               >
                 <Fragment>
@@ -338,7 +340,7 @@ export function Services() {
             </ConditionalRender>
             <ConditionalRender condition={renderTablet.isTablet}>
               <motion.div
-                className="static grid grid-cols-1 content-center overflow-hidden md:sticky md:top-[10%] md:mb-[10vh] md:h-[80vh] md:grid-cols-2 bg-white  rounded-[15px] custom-shadow"
+                className="static grid grid-cols-1 content-center overflow-hidden md:sticky md:top-[10%] md:mb-[10vh] md:h-[80vh] md:grid-cols-2 bg-white  rounded-[15px] custom-shadow border-t-2 border-neutral-200"
                 style={{ scale: useScroll.calculateScale(2, 6) }}
               >
                 <Fragment>
@@ -446,7 +448,7 @@ export function Services() {
             </ConditionalRender>
             <ConditionalRender condition={renderTablet.isTablet}>
               <motion.div
-                className="static grid grid-cols-1 content-center overflow-hidden md:sticky md:top-[10%] md:mb-[10vh] md:h-[80vh] md:grid-cols-2 bg-white rounded-[15px] custom-shadow"
+                className="static grid grid-cols-1 content-center overflow-hidden md:sticky md:top-[10%] md:mb-[10vh] md:h-[80vh] md:grid-cols-2 bg-white rounded-[15px] custom-shadow border-t-2 border-neutral-200"
                 style={{ scale: useScroll.calculateScale(3, 6) }}
               >
                 <Fragment>
@@ -553,7 +555,7 @@ export function Services() {
             </ConditionalRender>
             <ConditionalRender condition={renderTablet.isTablet}>
               <motion.div
-                className="static grid grid-cols-1 content-center overflow-hidden md:sticky md:top-[10%] md:mb-[10vh] md:h-[80vh] md:grid-cols-2 bg-white custom-shadow rounded-[15px]"
+                className="static grid grid-cols-1 content-center overflow-hidden md:sticky md:top-[10%] md:mb-[10vh] md:h-[80vh] md:grid-cols-2 bg-white custom-shadow rounded-[15px] border-t-2 border-neutral-200"
                 style={{ scale: useScroll.calculateScale(4, 6) }}
               >
                 <Fragment>
@@ -660,7 +662,7 @@ export function Services() {
             </ConditionalRender>
             <ConditionalRender condition={renderTablet.isTablet}>
               <motion.div
-                className="static grid grid-cols-1 content-center overflow-hidden md:sticky md:top-[10%] md:mb-[10vh] md:h-[80vh] md:grid-cols-2 bg-white rounded-[15px] custom-shadow"
+                className="static grid grid-cols-1 content-center overflow-hidden md:sticky md:top-[10%] md:mb-[10vh] md:h-[80vh] md:grid-cols-2 bg-white rounded-[15px] custom-shadow border-t-2 border-neutral-200"
                 style={{ scale: useScroll.calculateScale(5, 6) }}
               >
                 <Fragment>
@@ -732,6 +734,13 @@ export function Services() {
             </ConditionalRender>
           </Fragment>
         </div>
+      </div>
+      <div className="w-[25%] lg:w-[10%] aspect-square absolute z-[1] overflow-hidden top-0 left-0">
+        <Image
+          src={bgElement}
+          alt="background element"
+          className="w-full h-full object-cover"
+        />
       </div>
     </section>
   );

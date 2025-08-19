@@ -15,10 +15,10 @@ export function Process() {
           <div className=" flex flex-col items-center">
             <div className="w-full flex">
               <div className="w-full md:w-[70%] lg:w-[60%]">
-                <p className="mb-3 font-semibold md:mb-4 text-accentColor1 md:text-md lg:text-lg">
+                <p className="mb-3 font-semibold md:mb-4 md:text-md lg:text-lg bg-gradient-to-tr from-accentColor1 to-accentColor2 bg-clip-text text-transparent">
                   Process
                 </p>
-                <h2 className="mb-5 text-3xl font-bold md:mb-6 md:text-4xl lg:text-5xl text-neutral-800 dark:text-white">
+                <h2 className="mb-5 text-3xl font-bold md:mb-6 md:text-4xl lg:text-5xl text-neutral-800">
                   Our Seamless Project Development Journey
                 </h2>
               </div>
@@ -80,7 +80,7 @@ export function Process() {
                 <MdBuild className="text-2xl" />
               </div>
               <h3 className="mb-3 text-xl font-bold md:mb-4 md:text-2xl">
-                We build smart, scalable solutions.
+                We build smart solutions.
               </h3>
               <p>
                 Using modern tech stacks, we develop fast, secure, and scalable
@@ -93,7 +93,7 @@ export function Process() {
                 <MdDeliveryDining className="text-[26px]" />
               </div>
               <h3 className="mb-3 text-xl font-bold md:mb-4 md:text-2xl">
-                We deliver and support growth.
+                We deliver growth.
               </h3>
               <p>
                 After thorough testing, we deploy your project with confidence.
@@ -103,7 +103,7 @@ export function Process() {
             </div>
           </div>
         </div>
-        <div className="mt-12 flex flex-wrap items-center justify-center gap-4 md:mt-18 lg:mt-20">
+        <div className="mt-7 flex flex-wrap items-center justify-center gap-4 md:mt-10">
           <SecondaryButton url="/contact" text="Start Now" />
           <LinkButton url="/services" text="Learn More" />
         </div>

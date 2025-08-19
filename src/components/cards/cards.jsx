@@ -4,7 +4,7 @@ export const IconCard = ({ className, title, desc, icon }) => {
   return (
     <div
       className={cn(
-        "w-full h-full flex flex-col items-center bg-black p-10",
+        "w-full h-full flex flex-col items-center bg-black px-8 lg:px-12 py-12 lg:py-16",
         className
       )}
     >

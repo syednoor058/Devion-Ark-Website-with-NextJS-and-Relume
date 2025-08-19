@@ -16,7 +16,7 @@ export function LogoList() {
   return (
     <section
       id="logo-list"
-      className="px-[3%] py-10 md:py-16 lg:py-20 bg-[#131f46]"
+      className="px-[3%] py-10 md:py-16 lg:py-20 bg-black"
     >
       <div className="container">
         <h1 className="mx-auto mb-6 w-full max-w-lg text-center text-base leading-[1.2] font-bold md:mb-8 md:text-md md:leading-[1.2] text-neutral-200">
