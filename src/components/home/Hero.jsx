@@ -6,7 +6,7 @@ import { FaArrowRight } from "react-icons/fa6";
 import { useMediaQuery } from "react-responsive";
 import heroVerticle1 from "../../../public/images/hero-images/hero-2.3-1.jpg";
 import heroVerticle2 from "../../../public/images/hero-images/hero-2.3-2.jpg";
-import heroVerticle4 from "../../../public/images/hero-images/hero-3.4-1.jpg";
+import heroVerticle4 from "../../../public/images/hero-images/hero-3.4-1.png";
 import heroVerticle3 from "../../../public/images/hero-images/hero-3.4-2.jpg";
 import heroMainImg from "../../../public/images/hero-images/hero-main.jpg";
 import heroSquare1 from "../../../public/images/hero-images/hero-square-1.png";
@@ -114,7 +114,7 @@ export const Hero = ({ description = "" }) => {
               alt="educating clients with cutting edge technology for their business growth"
               className="w-full h-full object-cover rounded-[15px] object-left inset-shadow-2xs ring-background inset-shadow-white/20 shadow-lg shadow-zinc-950/15 ring-1"
             />
-            <div className="absolute w-full h-96 bg-gradient-to-t from-neutral-950 to-transparent left-0 right-0 -bottom-[1px] z-[100]"></div>
+            <div className="absolute w-full h-[480px] bg-gradient-to-t from-neutral-950 to-transparent left-0 right-0 bottom-0 z-[100]"></div>
           </motion.div>
 
           <motion.div
@@ -131,13 +131,12 @@ export const Hero = ({ description = "" }) => {
               </div>
               <div className="relative w-[40vw] sm:w-auto aspect-square overflow-hidden rounded-[15px]">
                 <video
-                  src="https://res.cloudinary.com/de8g5laai/video/upload/v1755074793/Untitled_design_3_sd62gd.mp4"
+                  src="https://res.cloudinary.com/dgqybmtey/video/upload/v1755687764/Untitled_design_4_guqero.mp4"
                   autoPlay
                   loop
                   muted
                   playsInline
                 />
-                <div className="absolute w-full h-full inset-0 bg-radial from-transparent to-neutral-950"></div>
               </div>
             </div>
 
@@ -151,12 +150,13 @@ export const Hero = ({ description = "" }) => {
           </motion.div>
         </div>
       </div>
-      <div className="w-full aspect-[2/1] overflow-hidden relative mt-10 flex md:hidden">
+      <div className="w-full aspect-video overflow-hidden relative mt-10 flex md:hidden">
         <Image
           src={mobileHeroImg}
           alt="mobile hero image"
           className="w-full h-full object-cover"
         />
+        <div className="w-full absolute -bottom-[0.5px] right-0 left-0 bg-gradient-to-t from-neutral-950 to-transparent h-[40%]"></div>
       </div>
       <div className="absolute inset-0 -z-10 mt-[100vh]" />
       <div className="w-full absolute inset-0 overflow-hidden z-[1]">

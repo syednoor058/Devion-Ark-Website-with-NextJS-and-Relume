@@ -64,7 +64,7 @@ export function Empower() {
               <SecondaryButton url="/about" text="Learn More" />
             </div>
           </div>
-          <div className="w-full aspect-square relative overflow-hidden">
+          <div className="w-full aspect-square relative overflow-hidden rounded-[15px]">
             <Image
               src={businessStatImg}
               alt="business stat documents research"

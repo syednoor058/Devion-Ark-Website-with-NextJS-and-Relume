@@ -20,7 +20,7 @@ import {
 } from "react-icons/lu";
 import { RxChevronDown } from "react-icons/rx";
 import { useMediaQuery } from "react-responsive";
-import logoDark from "../../../public/images/logo/logo-dark.png";
+import logo from "../../../public/images/logo/logo.png";
 import gymWebMock from "../../../public/images/portfolio/gym-website.jpg";
 import realEstateMock from "../../../public/images/portfolio/real-estate-software.jpg";
 import { LinkButton, PrimaryButton } from "../buttons/Buttons";
@@ -100,9 +100,9 @@ export function Navbar() {
           <div className="flex items-center justify-between lg:px-0">
             <a href={HOME}>
               <Image
-                src={logoDark}
-                alt="dark logo"
-                className="block h-8 md:h-10 w-auto"
+                src={logo}
+                alt="logo"
+                className="block h-5 md:h-6 lg:h-7 w-auto"
               />
             </a>
             <button

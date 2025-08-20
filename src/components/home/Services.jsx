@@ -104,11 +104,11 @@ export function Services() {
                       />
                     </div>
                   </div>
-                  <div className="order-last flex flex-col items-center justify-center md:order-last relative overflow-hidden">
+                  <div className="order-last flex flex-col items-center justify-center md:order-last relative overflow-hidden w-full aspect-[6/4.8]">
                     <Image
                       src={customSoftImg}
                       alt="software development"
-                      className="w-full h-full object-cover rounded-[15px]"
+                      className="w-full h-full object-cover rounded-[15px] object-center"
                     />
                   </div>
                 </Fragment>
@@ -211,11 +211,11 @@ export function Services() {
                       />
                     </div>
                   </div>
-                  <div className="order-last flex flex-col items-center justify-center md:order-first">
+                  <div className="order-last flex flex-col items-center justify-center md:order-first w-full aspect-[6/4]">
                     <Image
                       src={webDevImg}
                       alt="website development"
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover object-center"
                     />
                   </div>
                 </Fragment>
@@ -328,11 +328,11 @@ export function Services() {
                       />
                     </div>
                   </div>
-                  <div className="order-last flex flex-col items-center justify-center md:order-last">
+                  <div className="order-last flex flex-col items-center justify-center md:order-last w-full aspect-[6/4.8]">
                     <Image
                       src={socialMarketingImg}
                       alt="people all around the world connected with lines"
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover object-center"
                     />
                   </div>
                 </Fragment>
@@ -436,11 +436,11 @@ export function Services() {
                       />
                     </div>
                   </div>
-                  <div className="order-last flex flex-col items-center justify-center md:order-first overflow-hidden">
+                  <div className="order-last flex flex-col items-center justify-center md:order-first overflow-hidden w-full aspect-[6/4]">
                     <Image
                       src={seoImg}
                       alt="seo image"
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover object-center"
                     />
                   </div>
                 </Fragment>
@@ -543,11 +543,11 @@ export function Services() {
                       />
                     </div>
                   </div>
-                  <div className="order-last flex flex-col items-center justify-center md:order-last">
+                  <div className="order-last flex flex-col items-center justify-center md:order-last w-full aspect-[6/4]">
                     <Image
                       src={semImg}
                       alt="search engine marketing"
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover object-center"
                     />
                   </div>
                 </Fragment>
@@ -650,11 +650,11 @@ export function Services() {
                       />
                     </div>
                   </div>
-                  <div className="order-last flex flex-col items-center justify-center md:order-first overflow-hidden">
+                  <div className="order-last flex flex-col items-center justify-center md:order-first overflow-hidden w-full aspect-[6/4]">
                     <Image
                       src={businessConsultancyImg}
                       alt="three people discussing about business"
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover object-center"
                     />
                   </div>
                 </Fragment>

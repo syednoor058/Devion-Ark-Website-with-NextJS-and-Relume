@@ -5,14 +5,14 @@ import gymWeb from "../../../public/images/portfolio/gym-web.png";
 import petShopEcommerce from "../../../public/images/portfolio/petshop-ecommerce.png";
 import realEstate from "../../../public/images/portfolio/real-estate-software.png";
 import { SecondaryButton } from "../buttons/Buttons";
-import CardFlip from "../kokonutui/card-flip";
+import CardFlip from "../ui/card-flip";
 
 export const PortfolioBentoGrid = ({ className }) => {
   return (
     <div className={cn("w-full flex flex-col gap-3", className)}>
       <div className="w-full flex flex-col lg:flex-row gap-3">
         <div className="w-full lg:w-1/3 flex">
-          <div className="flex flex-col rounded-[15px] border px-4 pt-4 md:px-5 md:pt-5 xl:px-7 xl:pt-7 bg-gradient-to-b from-zinc-900 to-black">
+          <div className="w-full flex flex-col rounded-[15px] border px-4 pt-4 md:px-5 md:pt-5 xl:px-7 xl:pt-7 bg-gradient-to-b from-zinc-900 to-black">
             <h3 className="text-white font-bold text-lg">
               Gymnasium Center Responsive Business Website
             </h3>
@@ -35,7 +35,7 @@ export const PortfolioBentoGrid = ({ className }) => {
             </div>
           </div>
         </div>
-        <div className="w-full lg:w-2/3 grid grid-cols-1 lg:grid-cols-2 gap-3">
+        <div className="w-full lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-3">
           <div className="flex flex-col rounded-[15px] border p-4 md:p-5 xl:p-7 bg-gradient-to-b from-zinc-900 to-black">
             <h3 className="text-white font-bold text-lg">
               High Performing CPC Campaign

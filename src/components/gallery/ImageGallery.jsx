@@ -9,7 +9,7 @@ import Image from "next/image";
 
 export function ImageGallery({ images = [] }) {
   return (
-    <div className="py-10 md:py-16 lg:py-20 mb-5 md:mb-10 lg:mb-14">
+    <div className="py-12 lg:py-20 mb-5 md:mb-10 lg:mb-14">
       <h2 className="mb-5 text-3xl font-bold md:mb-6 md:text-4xl lg:text-5xl text-titleColor px-[5%]">
         A Glimpse Into Our World
       </h2>
@@ -25,7 +25,7 @@ export function ImageGallery({ images = [] }) {
                 key={index}
                 className="pl-2 md:pl-4 basis-[70%] md:basis-1/2 lg:basis-[40%]"
               >
-                <div className="w-full aspect-[6/4] relative overflow-hidden">
+                <div className="w-full aspect-[6/4] relative overflow-hidden rounded-[15px]">
                   <Image
                     src={img}
                     alt="company gallery images"

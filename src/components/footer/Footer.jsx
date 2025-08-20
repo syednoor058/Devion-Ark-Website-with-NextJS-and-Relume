@@ -1,5 +1,7 @@
 "use client";
 
+import { HOME } from "@/routes/websiteRoute";
+import Image from "next/image";
 import { useState } from "react";
 import {
   BiLogoFacebookCircle,
@@ -8,6 +10,7 @@ import {
   BiLogoYoutube,
 } from "react-icons/bi";
 import { FaXTwitter } from "react-icons/fa6";
+import logo from "../../../public/images/logo/logo.png";
 import { LinkButton, SubscribeButton } from "../buttons/Buttons";
 
 const useForm = () => {
@@ -36,11 +39,11 @@ export function Footer() {
       <div className="container">
         <div className="grid grid-cols-1 gap-x-[8vw] gap-y-12 pb-7 md:gap-y-16 md:pb-10 lg:grid-cols-[0.75fr_1fr] lg:gap-y-4 lg:pb-14">
           <div className="flex flex-col">
-            <a href="#" className="mb-5 md:mb-6">
-              <img
-                src="https://d22po4pjz3o32e.cloudfront.net/logo-image.svg"
-                alt="Logo image"
-                className="inline-block invert-100"
+            <a href={HOME} className="mb-2.5 md:mb-3">
+              <Image
+                src={logo}
+                alt="logo"
+                className="block h-7 md:h-8 lg:h-10 w-auto"
               />
             </a>
             <p className="mb-5 md:mb-6">
