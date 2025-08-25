@@ -6,11 +6,18 @@ import { SecondaryButton } from "../buttons/Buttons";
 
 export function CallToAction() {
   return (
-    <section id="relume" className="relative px-[5%] py-10 md:py-16 lg:py-20">
+    <section
+      id="relume"
+      className="relative px-[5%] py-10 md:py-16 lg:py-20 bg-black"
+    >
       <div className="relative z-10 container">
         <div className="w-full max-w-lg">
           <h2 className="mb-5 text-3xl font-bold md:mb-6 md:text-4xl lg:text-5xl text-white">
-            Unlock Your Business Potential Today
+            Unlock Your{" "}
+            <span className="bg-gradient-to-b from-accentColor1 to-accentColor2 bg-clip-text text-transparent">
+              Business Potential
+            </span>{" "}
+            Today
           </h2>
           <p className=" md:text-md text-neutral-200">
             Contact us now for a personalized consultation and discover how we
@@ -29,9 +36,9 @@ export function CallToAction() {
         <Image
           src={callToActionBg}
           alt="tall building"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover blur-[0.5px]"
         />
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-black/60" />
       </div>
     </section>
   );

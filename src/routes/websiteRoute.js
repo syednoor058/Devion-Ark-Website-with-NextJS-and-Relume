@@ -3,3 +3,6 @@ export const ABOUT = '/about';
 export const CONTACT = '/contact';
 export const SERVICES = '/services';
 export const CASESTUDIES = '/case-studies';
+export const CUSTOMSOFTWARESOLUTIONS = '/services/custom-software-solutions';
+export const WEBAPPDEVELOPMENT = 'services/web-application-development';
+export const SOCIALMEDIAMARKETING = 'services/social-media-marketing';

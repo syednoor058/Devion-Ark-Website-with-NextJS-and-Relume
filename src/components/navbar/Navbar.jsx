@@ -1,6 +1,12 @@
 "use client";
 
-import { CONTACT, HOME } from "@/routes/websiteRoute";
+import {
+  CONTACT,
+  CUSTOMSOFTWARESOLUTIONS,
+  HOME,
+  SOCIALMEDIAMARKETING,
+  WEBAPPDEVELOPMENT,
+} from "@/routes/websiteRoute";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -231,7 +237,7 @@ export function Navbar() {
                           Our Services
                         </h4>
                         <a
-                          href="#"
+                          href={CUSTOMSOFTWARESOLUTIONS}
                           className="grid w-full grid-cols-[max-content_1fr] items-start gap-x-3 py-2"
                         >
                           <div className="flex flex-col items-center justify-center p-1">
@@ -248,7 +254,7 @@ export function Navbar() {
                           </div>
                         </a>
                         <a
-                          href="#"
+                          href={WEBAPPDEVELOPMENT}
                           className="grid w-full grid-cols-[max-content_1fr] items-start gap-x-3 py-2"
                         >
                           <div className="flex flex-col items-center justify-center p-1">
@@ -265,7 +271,7 @@ export function Navbar() {
                           </div>
                         </a>
                         <a
-                          href="#"
+                          href={SOCIALMEDIAMARKETING}
                           className="grid w-full grid-cols-[max-content_1fr] items-start gap-x-3 py-2"
                         >
                           <div className="flex flex-col items-center justify-center p-1">
