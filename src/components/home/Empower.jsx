@@ -31,7 +31,7 @@ export function Empower() {
               <div className="p-4 rounded-[15px] border border-neutral-100 bg-gradient-to-br from-accentColor1/10 to-accentColor2/10">
                 <h6 className="mb-1 font-bold md:mb-3 text-neutral-800 flex flex-row gap-2 items-center">
                   <span>
-                    <FaMedal className="" />
+                    <FaMedal />
                   </span>
                   <span>Expert Guidance</span>
                 </h6>
@@ -43,7 +43,7 @@ export function Empower() {
               <div className="p-4 rounded-[15px] border border-neutral-100 bg-gradient-to-br from-accentColor1/10 to-accentColor2/10">
                 <h6 className="mb-1 font-bold md:mb-3 text-neutral-800 flex flex-row gap-2 items-center">
                   <span>
-                    <MdDashboardCustomize className="text-[20px]" />
+                    <MdDashboardCustomize />
                   </span>
                   <span>Custom Solutions</span>
                 </h6>
