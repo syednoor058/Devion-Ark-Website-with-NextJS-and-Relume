@@ -53,7 +53,7 @@ const CustomSoftwareSolutions = () => {
           {
             icon: <FiLayout />,
             title: "Seamless User Experience",
-            desc: "We prioritize user-friendly design to ensure smooth navigation and engagement. Whether it’s a mobile app, or web app",
+            desc: "We prioritize user-friendly design to ensure smooth navigation and engagement. Whether it’s a mobile app, or web app.",
           },
           {
             icon: <LuShieldCheck />,

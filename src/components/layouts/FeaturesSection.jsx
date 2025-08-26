@@ -19,7 +19,7 @@ const FeaturesSection = ({ title, features = [], theme = "dark" }) => {
           </div>
         </div>
         <div className="w-full flex justify-end">
-          <div className="w-full lg:w-[85%] grid grid-cols-1 items-start justify-center md:grid-cols-2 lg:grid-cols-3 divide-x divide-y border">
+          <div className="w-full lg:w-[85%] grid grid-cols-1 items-start justify-center md:grid-cols-2 lg:grid-cols-3 divide-x divide-y divide-neutral-400 border border-neutral-400">
             {features.map((feature, index) => (
               <IconCard
                 theme={theme}

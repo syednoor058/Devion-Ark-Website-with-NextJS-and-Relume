@@ -1,9 +1,12 @@
 "use client";
 
 import {
+  BUSINESSCONSULTANCY,
   CONTACT,
   CUSTOMSOFTWARESOLUTIONS,
   HOME,
+  SEARCHENGINEMARKETING,
+  SEARCHENGINEOPTIMIZATION,
   SOCIALMEDIAMARKETING,
   WEBAPPDEVELOPMENT,
 } from "@/routes/websiteRoute";
@@ -288,7 +291,7 @@ export function Navbar() {
                           </div>
                         </a>
                         <a
-                          href="#"
+                          href={SEARCHENGINEMARKETING}
                           className="grid w-full grid-cols-[max-content_1fr] items-start gap-x-3 py-2"
                         >
                           <div className="flex flex-col items-center justify-center p-1">
@@ -307,7 +310,7 @@ export function Navbar() {
                       </div>
                       <div className="grid auto-rows-max grid-cols-1 grid-rows-[max-content] gap-y-2 md:gap-y-4">
                         <a
-                          href="#"
+                          href={SEARCHENGINEOPTIMIZATION}
                           className="grid w-full grid-cols-[max-content_1fr] items-start gap-x-3 py-2"
                         >
                           <div className="flex flex-col items-center justify-center p-1">
@@ -324,7 +327,7 @@ export function Navbar() {
                           </div>
                         </a>
                         <a
-                          href="#"
+                          href={BUSINESSCONSULTANCY}
                           className="grid w-full grid-cols-[max-content_1fr] items-start gap-x-3 py-2"
                         >
                           <div className="flex flex-col items-center justify-center p-1">

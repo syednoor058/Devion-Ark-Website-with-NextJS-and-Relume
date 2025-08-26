@@ -96,8 +96,8 @@ const ServiceHeader = ({ title, desc, images }) => {
             {images.map((image, index) => (
               <CarouselItem key={index} className="pl-0">
                 <div className="relative inline-block size-full text-left align-top whitespace-normal">
-                  <div className="flex h-screen flex-col">
-                    <div className="relative flex-1 w-full aspect-[6/4] overflow-hidden">
+                  <div className="flex flex-col">
+                    <div className="relative w-full aspect-[3/2] overflow-hidden">
                       <Image
                         className="w-full h-full object-cover"
                         src={image.src}
