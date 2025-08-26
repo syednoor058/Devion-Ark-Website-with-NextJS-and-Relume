@@ -68,7 +68,7 @@ export function SubscribeButton({ text = "", url = "#", className = "" }) {
     <Link
       href={url}
       className={cn(
-        "transition-all duration-300 ease-in group overflow-hidden relative bg-white text-neutral-700 rounded-full px-5 py-2.5 flex justify-center items-center",
+        "transition-all duration-300 ease-in group overflow-hidden relative bg-white text-neutral-700 rounded-sm px-5 py-2.5 flex justify-center items-center",
         className
       )}
     >

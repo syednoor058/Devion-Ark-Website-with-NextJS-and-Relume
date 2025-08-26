@@ -10,6 +10,7 @@ export function InfiniteSlider({
   speedOnHover,
   direction = "horizontal",
   reverse = false,
+  gap = "gap-10 lg:gap-16",
   className,
 }) {
   const [currentSpeed, setCurrentSpeed] = useState(speed);
@@ -81,7 +82,7 @@ export function InfiniteSlider({
   return (
     <div className={cn("overflow-hidden", className)}>
       <motion.div
-        className="flex w-max gap-10 lg:gap-16"
+        className={`flex w-max ${gap}`}
         style={{
           ...(direction === "horizontal"
             ? { x: translation }

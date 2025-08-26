@@ -1,10 +1,10 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 import { useMediaQuery } from "react-responsive";
+import { PrimaryButton, SecondaryButton } from "../buttons/Buttons";
 
 const useRelume = () => {
   const isMobile = useMediaQuery({
@@ -44,10 +44,17 @@ const useRelume = () => {
   return { containerRef, imageStyle, cardStyle };
 };
 
-export function Layout517() {
+export function ZoomOnScroll({
+  tagline,
+  title,
+  desc,
+  primaryButton,
+  secondaryButton,
+  image,
+}) {
   const useScroll = useRelume();
   return (
-    <section className="h-[200vh]" ref={useScroll.containerRef}>
+    <section className="h-[200vh] bg-neutral-950" ref={useScroll.containerRef}>
       <div className="sticky top-0 flex h-screen w-full items-center justify-center overflow-hidden">
         <motion.img
           src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
@@ -59,24 +66,20 @@ export function Layout517() {
           className="absolute inset-0 mx-auto flex size-full max-w-xxl items-center justify-end px-[5%]"
           style={useScroll.cardStyle}
         >
-          <Card className="flex w-[90%] flex-col p-6 md:max-w-[658px] md:p-12">
-            <p className="mb-3 font-semibold md:mb-4">Tagline</p>
-            <h2 className="heading-h2 mb-5 font-bold md:mb-6">
-              Medium length section heading goes here
-            </h2>
-            <p className="text-medium">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros elementum tristique. Duis cursus,
-              mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
-              libero vitae erat.
+          <Card className="flex w-[90%] flex-col p-6 md:max-w-[658px] md:p-12 border-neutral-400 text-neutral-600">
+            <p className="mb-3 font-semibold md:mb-4 text-accentColor1">
+              {tagline}
             </p>
+            <h2 className="text-md mb-5 font-bold md:mb-6 text-neutral-800">
+              {title}
+            </h2>
+            <p className="text-medium">{desc}</p>
             <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
-              <Button title="Button" variant="secondary">
-                Button
-              </Button>
-              <Button title="Button" variant="link" size="link">
-                Button
-              </Button>
+              <PrimaryButton text={primaryButton} />
+              <SecondaryButton
+                text={secondaryButton}
+                className="border-neutral-600 text-neutral-600"
+              />
             </div>
           </Card>
         </motion.div>

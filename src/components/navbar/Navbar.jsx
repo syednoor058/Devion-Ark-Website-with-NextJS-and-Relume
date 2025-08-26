@@ -2,6 +2,7 @@
 
 import {
   BUSINESSCONSULTANCY,
+  CASESTUDIES,
   CONTACT,
   CUSTOMSOFTWARESOLUTIONS,
   HOME,
@@ -177,7 +178,7 @@ export function Navbar() {
             className="overflow-auto lg:ml-6 lg:flex lg:items-center lg:px-0 lg:[--height-closed:auto] lg:[--height-open:auto]"
           >
             <a
-              href="#"
+              href={HOME}
               className={`block py-3 text-md first:pt-7 lg:px-4 lg:py-6 lg:text-base first:lg:pt-6 ${
                 pathname === "/" ? "text-accentColor1" : "text-neutral-300"
               }`}
@@ -630,7 +631,8 @@ export function Navbar() {
                         </div>
                         <div className="flex items-center">
                           <LinkButton
-                            text="See all cases"
+                            url={CASESTUDIES}
+                            text="Explore All Cases"
                             className="text-white"
                           />
                         </div>
