@@ -85,7 +85,7 @@ const ServiceHeader = ({ title, desc, images }) => {
           />
         </div>
       </div>
-      <div className="relative clear-both h-[300px] max-h-[60rem] min-h-screen w-full text-center">
+      <div className="relative clear-both w-full text-center">
         <Carousel
           opts={carousel.options}
           plugins={carousel.plugins}
