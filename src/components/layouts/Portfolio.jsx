@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-import bgElement from "../../../public/images/shapes/bg-elem-1.png";
 import { SecondaryButton } from "../buttons/Buttons";
 import { PortfolioBentoGrid } from "../grids/Grids";
 
@@ -46,13 +44,6 @@ export function Portfolio() {
             className="text-neutral-300 border-neutral-300"
           />
         </footer>
-      </div>
-      <div className="w-[25%] lg:w-[10%] aspect-square absolute z-[1] overflow-hidden top-0 right-0 scale-x-[-1]">
-        <Image
-          src={bgElement}
-          alt="background element"
-          className="w-full h-full object-cover"
-        />
       </div>
     </section>
   );

@@ -40,7 +40,6 @@ const SearchEngineOptimization = () => {
       />
       <FeaturesSection
         theme="light"
-        title="Smart Solutions with Smarter Features"
         features={[
           {
             icon: <AiOutlineAudit />,

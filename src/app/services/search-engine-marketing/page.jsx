@@ -38,7 +38,6 @@ const SearchEngineMarketing = () => {
       />
       <FeaturesSection
         theme="light"
-        title="Smart Solutions with Smarter Features"
         features={[
           {
             icon: <LuSwords />,

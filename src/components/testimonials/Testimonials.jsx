@@ -36,7 +36,7 @@ function TestimonialCard({ name = "", feedback = "", designation = "", img }) {
 
 export function Testimonials() {
   return (
-    <div className="py-10 md:py-16 lg:py-20 mb-10 md:mb-16 lg:mb-20">
+    <div className="py-10 md:py-16 lg:py-20">
       <h2 className="mb-5 text-3xl font-bold md:mb-6 md:text-4xl lg:text-5xl text-titleColor px-[5%]">
         What Our Clients Say
       </h2>

@@ -38,7 +38,6 @@ const CustomSoftwareSolutions = () => {
       />
       <FeaturesSection
         theme="light"
-        title="Smart Solutions with Smarter Features"
         features={[
           {
             icon: <LuBriefcaseBusiness />,
