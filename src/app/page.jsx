@@ -34,7 +34,7 @@ export default function Home() {
       <Hero description="We are a digital-first agency helping businesses grow through custom software, web development, and performance-driven marketing. From strategic planning to execution, we build tailored solutions that boost visibility, automate workflows, and drive real results." />
 
       <FeaturesSection
-        title={<>Helping business overcome digital growth challenges</>}
+        title={<>Helping Businesses Overcome Digital Growth Challenges</>}
         features={[
           {
             icon: <AiOutlineThunderbolt />,
@@ -87,7 +87,14 @@ export default function Home() {
 
       <MiddleImageIconBoxSection
         tagline="Process"
-        title="Our Seamless Project Development Journey"
+        title={
+          <>
+            Our Seamless Project{" "}
+            <span className="bg-gradient-to-t from-accentColor1 to-accentColor2 bg-clip-text text-transparent">
+              Development Journey
+            </span>
+          </>
+        }
         desc="At Devion Ark, we follow a clear, collaborative, and efficient process to bring your digital vision to life. From idea to launch — every step is handled with precision and care to ensure results that truly make an impact. We begin with an in-depth consultation to understand your unique needs. Our team then crafts a tailored strategy to ensure your project's success."
         image={{
           src: mutualTrustImg,

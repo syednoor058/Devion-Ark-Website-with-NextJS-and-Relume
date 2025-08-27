@@ -52,29 +52,24 @@ export function Services() {
       className="px-[5%] py-10 md:py-16 lg:py-20 text-neutral-600 bg-neutral-100 md:bg-white relative"
     >
       <div className="relative z-[3]">
-        <div className="mb-12 w-full md:mb-16 lg:mb-20">
-          <div className="w-full flex">
-            <div className="w-full md:w-[70%] lg:w-[60%]">
-              <p className="mb-3 font-semibold md:mb-4 md:text-md lg:text-lg relative z-[3] bg-gradient-to-tr from-accentColor1 to-accentColor2 bg-clip-text text-transparent">
-                Innovate
-              </p>
-              <h2 className="mb-5 text-3xl font-bold md:mb-6 md:text-4xl lg:text-5xl text-neutral-800">
-                Empowering Your Digital Journey
-              </h2>
-            </div>
-          </div>
-          <div className="w-full flex justify-end">
-            <div className="w-full md:w-[70%] lg:w-[50%] pl-7 border-l-3 border-accentColor1">
-              <p className="md:text-md">
-                We&apos;re more than a digital service provider company in
-                Bangladesh – we're your business growth partners. Specializing
-                in custom software development, website solutions, and
-                data-driven digital marketing services, we empower businesses
-                across Dhaka and beyond to outrank competitors, streamline
-                operations, and connect with their audience. Whether you're a
-                startup or an enterprise.
-              </p>
-            </div>
+        <div className="mb-12 w-full flex flex-col justify-center items-center md:mb-16 lg:mb-20">
+          <div className="max-w-3xl flex flex-col justify-center items-center">
+            <p className="mb-3 font-semibold md:mb-4 md:text-md lg:text-lg relative z-[3] bg-gradient-to-tr from-accentColor2 via-pink-300 to-accentColor2 px-3 py-1 rounded-full text-white">
+              Innovate
+            </p>
+            <h2 className="mb-5 text-3xl font-bold md:mb-6 md:text-4xl lg:text-5xl text-neutral-800 text-center">
+              Empowering Your
+              <br />
+              Digital Journey
+            </h2>
+            <p className="md:text-md text-center">
+              We&apos;re more than a digital service provider company in
+              Bangladesh – we're your business growth partners. Specializing in
+              custom software development, website solutions, and data-driven
+              digital marketing services, we empower businesses across Dhaka and
+              beyond to outrank competitors, streamline operations, and connect
+              with their audience.
+            </p>
           </div>
         </div>
         <div

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { LinkButton, SecondaryButton } from "../buttons/Buttons";
+import { BackgroundRippleEffect } from "../ui/background-ripple-effect";
 
 export function MiddleImageIconBoxSection({
   theme = "dark",
@@ -20,34 +21,37 @@ export function MiddleImageIconBoxSection({
           : "bg-white text-neutral-600"
       }`}
     >
-      <div className=" relative z-[3]">
-        <div className="mb-12 md:mb-18 lg:mb-20">
-          <div className=" flex flex-col ">
-            <div className="w-full flex">
-              <div className="w-full md:w-[70%] lg:w-[60%]">
-                <p className="mb-3 font-semibold md:mb-4 md:text-md lg:text-lg bg-gradient-to-tr from-accentColor1 to-accentColor2 bg-clip-text text-transparent">
-                  {tagline}
-                </p>
-                <h2
-                  className={`mb-5 text-3xl font-bold md:mb-6 md:text-4xl lg:text-5xl ${
-                    theme === "dark" ? "text-white" : "text-neutral-800"
-                  }`}
-                >
-                  {title}
-                </h2>
-              </div>
-            </div>
-            <div className="w-full flex justify-end">
-              <div className="w-full md:w-[70%] lg:w-[50%] pl-7 border-l-2 border-accentColor1">
-                <p className="md:text-md ">{desc}</p>
-              </div>
-            </div>
-          </div>
+      <BackgroundRippleEffect />
+      <div className="w-full flex flex-col items-center relative z-[3]">
+        <div className="max-w-3xl flex flex-col justify-center items-center">
+          <p className="mb-3 font-semibold md:mb-4 md:text-md lg:text-lg bg-gradient-to-tr from-accentColor1 via-blue-400 to-accentColor1 text-white px-3 py-1 rounded-full">
+            {tagline}
+          </p>
+          <h2
+            className={`mb-5 text-3xl font-bold md:mb-6 md:text-4xl lg:text-5xl ${
+              theme === "dark" ? "text-white" : "text-neutral-800"
+            } text-center`}
+          >
+            {title}
+          </h2>
+          <p className="md:text-md text-center">{desc}</p>
+        </div>
+        <div className="mt-7 flex flex-wrap  justify-center items-center gap-4 md:mt-10 mb-12 md:mb-18 lg:mb-20">
+          <SecondaryButton
+            url="/contact"
+            text="Start With Us"
+            className="text-neutral-300 border-neutral-300"
+          />
+          <LinkButton
+            className="text-neutral-300"
+            url="/services"
+            text="Learn More"
+          />
         </div>
         <div className="grid place- gap-x-8 gap-y-5 sm:grid-cols-2 md:gap-y-12 lg:gap-y-16 lg:grid-cols-[1fr_1.5fr_1fr] lg:gap-x-12">
           <div className="grid w-full grid-cols-1 gap-x-20 gap-y-5 md:gap-y-12 lg:gap-y-16">
             {iconbox1.map((box, index) => (
-              <div key={index} className="flex flex-col p-5">
+              <div key={index} className="flex flex-col">
                 <h3 className="mb-3  font-bold md:mb-4 text-white flex flex-row gap-2 items-center">
                   <span>{box.icon}</span> <span>{box.title}</span>
                 </h3>
@@ -64,7 +68,7 @@ export function MiddleImageIconBoxSection({
           </div>
           <div className="grid w-full grid-cols-1 gap-x-20 gap-y-5 md:gap-y-12 lg:gap-y-16">
             {iconbox2.map((box, index) => (
-              <div key={index} className="flex flex-col p-5">
+              <div key={index} className="w-full h-full flex flex-col">
                 <h3 className="mb-3  font-bold md:mb-4 text-white flex flex-row gap-2 items-center">
                   <span>{box.icon}</span> <span>{box.title}</span>
                 </h3>
@@ -72,18 +76,6 @@ export function MiddleImageIconBoxSection({
               </div>
             ))}
           </div>
-        </div>
-        <div className="mt-7 flex flex-wrap  justify-center items-center gap-4 md:mt-10">
-          <SecondaryButton
-            url="/contact"
-            text="Start Now"
-            className="text-neutral-300 border-neutral-300"
-          />
-          <LinkButton
-            className="text-neutral-300"
-            url="/services"
-            text="Learn More"
-          />
         </div>
       </div>
     </section>

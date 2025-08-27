@@ -2,6 +2,18 @@ import { DoubleSliderHeader } from "@/components/headers/DoubleSliderHeader";
 import { CounterSlider } from "@/components/layouts/CounterSlider";
 import { Portfolio } from "@/components/layouts/Portfolio";
 import { ZoomOnScroll } from "@/components/layouts/ZoomOnScroll";
+import mockup1 from "../../../public/images/case-studies/mockups/mockup-1.jpg";
+import mockup10 from "../../../public/images/case-studies/mockups/mockup-10.jpg";
+import mockup2 from "../../../public/images/case-studies/mockups/mockup-2.jpg";
+import mockup3 from "../../../public/images/case-studies/mockups/mockup-3.jpg";
+import mockup4 from "../../../public/images/case-studies/mockups/mockup-4.jpg";
+import mockup5 from "../../../public/images/case-studies/mockups/mockup-5.jpg";
+import mockup6 from "../../../public/images/case-studies/mockups/mockup-6.jpg";
+import mockup7 from "../../../public/images/case-studies/mockups/mockup-7.jpg";
+import mockup8 from "../../../public/images/case-studies/mockups/mockup-8.jpg";
+import mockup9 from "../../../public/images/case-studies/mockups/mockup-9.jpg";
+import scrollMockupMobile from "../../../public/images/case-studies/mockups/mockup-scroll-mobile.jpg";
+import scrollMockup from "../../../public/images/case-studies/mockups/mockup-scroll.jpg";
 
 export default function Page() {
   return (
@@ -9,7 +21,8 @@ export default function Page() {
       <DoubleSliderHeader
         title={
           <>
-            Showcasing Growth Through{" "}
+            Showcasing Growth Through
+            <br />
             <span className="bg-gradient-to-tr from-accentColor2 to-accentColor1 bg-clip-text text-transparent">
               Digital Excellence
             </span>
@@ -18,6 +31,8 @@ export default function Page() {
         desc="Every project tells a story of innovation, creativity, and measurable results. From custom software to digital marketing campaigns, our case studies showcase how we help businesses grow, adapt, and succeed in the digital era."
         primaryButton="Explore More"
         secondaryButton="Start Your Project"
+        images1={[mockup1, mockup2, mockup3, mockup4, mockup5]}
+        images2={[mockup6, mockup7, mockup8, mockup9, mockup10]}
       />
       <ZoomOnScroll
         tagline="Excellence in Action"
@@ -25,6 +40,8 @@ export default function Page() {
         desc="We believe the foundation of a successful project lies in truly understanding the client’s needs. From deep research to creative brainstorming, our approach ensures every solution we build is meaningful, practical, and result-driven."
         primaryButton="View Details"
         secondaryButton="Work With Us"
+        image={scrollMockup}
+        mobileImage={scrollMockupMobile}
       />
       <CounterSlider
         cards={[
@@ -50,7 +67,7 @@ export default function Page() {
           },
         ]}
       />
-      <Portfolio />
+      <Portfolio expanded={true} />
     </>
   );
 }

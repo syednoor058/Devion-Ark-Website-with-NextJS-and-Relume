@@ -48,9 +48,10 @@ export const Hero = ({ description = "" }) => {
         <div className="container">
           <div className="mx-auto w-full max-w-3xl text-center">
             <h1 className="mb-5 text-3xl font-bold md:mb-6 md:text-4xl lg:text-5xl text-white">
-              Transforming Your Ideas Into{" "}
+              Transforming Your Ideas
+              <br />
               <span className="bg-gradient-to-tr from-accentColor2 to-accentColor1 bg-clip-text text-transparent">
-                Digital Reality
+                Into Digital Reality
               </span>
             </h1>
             <p className="md:text-md text-neutral-300">{description}</p>

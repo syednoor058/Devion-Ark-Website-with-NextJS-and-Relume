@@ -1,8 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { FaArrowRight, FaMedal } from "react-icons/fa6";
-import { MdDashboardCustomize } from "react-icons/md";
+import { FaArrowRight } from "react-icons/fa6";
+import { MdOutlineDashboardCustomize } from "react-icons/md";
+import { PiMedalBold } from "react-icons/pi";
 import businessStatImg from "../../../public/images/business-stats.jpg";
 import bgElement from "../../../public/images/shapes/bg-elem-2.png";
 import { PrimaryButton, SecondaryButton } from "../buttons/Buttons";
@@ -31,7 +32,7 @@ export function Empower() {
               <div className="p-4 rounded-[15px] border border-neutral-100 bg-gradient-to-br from-accentColor1/10 to-accentColor2/10">
                 <h6 className="mb-1 font-bold md:mb-3 text-neutral-800 flex flex-row gap-2 items-center">
                   <span>
-                    <FaMedal />
+                    <PiMedalBold />
                   </span>
                   <span>Expert Guidance</span>
                 </h6>
@@ -43,7 +44,7 @@ export function Empower() {
               <div className="p-4 rounded-[15px] border border-neutral-100 bg-gradient-to-br from-accentColor1/10 to-accentColor2/10">
                 <h6 className="mb-1 font-bold md:mb-3 text-neutral-800 flex flex-row gap-2 items-center">
                   <span>
-                    <MdDashboardCustomize />
+                    <MdOutlineDashboardCustomize />
                   </span>
                   <span>Custom Solutions</span>
                 </h6>

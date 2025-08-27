@@ -37,13 +37,15 @@ function TestimonialCard({ name = "", feedback = "", designation = "", img }) {
 export function Testimonials() {
   return (
     <div className="py-10 md:py-16 lg:py-20 mb-6">
-      <h2 className="mb-5 text-3xl font-bold md:mb-6 md:text-4xl lg:text-5xl text-titleColor px-[5%]">
-        What Our Clients Say
-      </h2>
-      <p className="md:text-md px-[5%]">
-        From vision to reality — discover how we&apos;ve made an impact through
-        the words of those we&apos;ve worked with.
-      </p>
+      <div className="max-w-3xl">
+        <h2 className="mb-5 text-3xl font-bold md:mb-6 md:text-4xl lg:text-5xl text-titleColor px-[5%]">
+          What Our Clients Say
+        </h2>
+        <p className="md:text-md px-[5%]">
+          From vision to reality — discover how we&apos;ve made an impact
+          through the words of those we&apos;ve worked with.
+        </p>
+      </div>
       <div className="w-full mt-6 md:mt-8">
         <Carousel className="w-full relative">
           <CarouselContent className="-ml-1">
