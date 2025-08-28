@@ -9,3 +9,4 @@ export const SOCIALMEDIAMARKETING = '/services/social-media-marketing';
 export const SEARCHENGINEMARKETING = '/services/search-engine-marketing';
 export const SEARCHENGINEOPTIMIZATION = '/services/search-engine-optimization';
 export const BUSINESSCONSULTANCY = '/services/business-consultancy';
+export const PROPSUITAPP = '/case-studies/comprehensive-real-estate-management-system';

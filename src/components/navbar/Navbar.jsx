@@ -6,6 +6,7 @@ import {
   CONTACT,
   CUSTOMSOFTWARESOLUTIONS,
   HOME,
+  PROPSUITAPP,
   SEARCHENGINEMARKETING,
   SEARCHENGINEOPTIMIZATION,
   SOCIALMEDIAMARKETING,
@@ -479,7 +480,7 @@ export function Navbar() {
                           Explore Case Studies
                         </h4>
                         <a
-                          href="#"
+                          href={PROPSUITAPP}
                           className="grid w-full grid-cols-[max-content_1fr] items-start gap-x-3 py-2"
                         >
                           <div className="flex flex-col items-center justify-center p-1">
@@ -594,6 +595,7 @@ export function Navbar() {
                               </p>
                               <div className="mt-1.5">
                                 <LinkButton
+                                  url={PROPSUITAPP}
                                   text="Read more"
                                   icon={false}
                                   className="text-sm text-neutral-300"
