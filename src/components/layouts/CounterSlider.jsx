@@ -34,7 +34,7 @@ const FeatureCard = ({ feature, children }) => {
 const useRelume = () => {
   const ref = useRef(null);
   const isTablet = useMediaQuery({
-    query: "(min-width: 768px) and (max-width: 991px)",
+    query: "(min-width: 768px) and (max-width: 1024px)",
   });
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -57,7 +57,7 @@ const useRelume = () => {
 export function CounterSlider({ cards = [] }) {
   const useScroll = useRelume();
   return (
-    <section className="px-[5%] py-16 md:py-24 lg:py-28" ref={useScroll.ref}>
+    <section className="px-[5%] py-10 md:py-16 lg:py-20" ref={useScroll.ref}>
       <div className="container">
         <div className="relative grid auto-cols-fr grid-cols-1 items-start gap-x-8 gap-y-12 md:grid-cols-[0.75fr_1fr] md:gap-y-16 lg:grid-cols-[max-content_1fr] lg:gap-x-20">
           <div className="static top-[20%] hidden h-56 overflow-hidden md:sticky md:flex md:items-start">

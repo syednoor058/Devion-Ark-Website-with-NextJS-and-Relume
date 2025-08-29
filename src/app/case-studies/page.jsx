@@ -12,9 +12,9 @@ import mockup6 from "../../../public/images/case-studies/mockups/mockup-6.jpg";
 import mockup7 from "../../../public/images/case-studies/mockups/mockup-7.jpg";
 import mockup8 from "../../../public/images/case-studies/mockups/mockup-8.jpg";
 import mockup9 from "../../../public/images/case-studies/mockups/mockup-9.jpg";
-import scrollMockupMobile from "../../../public/images/case-studies/mockups/mockup-scroll-mobile.jpg";
-import scrollMockup from "../../../public/images/case-studies/mockups/mockup-scroll.jpg";
-
+import scrollMockupMobile from "../../../public/images/case-studies/mockups/mockup-scroll-mobile.png";
+import scrollMockupTab from "../../../public/images/case-studies/mockups/mockup-scroll-tab.png";
+import scrollMockup from "../../../public/images/case-studies/mockups/mockup-scroll.png";
 export default function Page() {
   return (
     <>
@@ -42,6 +42,7 @@ export default function Page() {
         secondaryButton="Work With Us"
         image={scrollMockup}
         mobileImage={scrollMockupMobile}
+        tabImage={scrollMockupTab}
       />
       <CounterSlider
         cards={[

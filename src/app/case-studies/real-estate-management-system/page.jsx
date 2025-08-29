@@ -1,3 +1,4 @@
+import { TestimonialCard } from "@/components/cards/cards";
 import { DownImageHeader } from "@/components/headers/DownImageHeader";
 import { ZoomOnScrollHeader } from "@/components/headers/ZoomOnScrollHeader";
 import { ImageBox } from "@/components/layouts/ImageBox";
@@ -5,16 +6,29 @@ import { GoProjectSymlink } from "react-icons/go";
 import { GrUserWorker } from "react-icons/gr";
 import { LuBadgeDollarSign } from "react-icons/lu";
 import { MdOutlineShoppingCart } from "react-icons/md";
-import productSS from "../../../../public/images/case-studies/real-estate-system/propsuit-screenshot-1.jpg";
+import productSSMob from "../../../../public/images/case-studies/real-estate-system/propsuit-screenshot-1-mob.png";
+import productSSTab from "../../../../public/images/case-studies/real-estate-system/propsuit-screenshot-1-tab.png";
+import productSS from "../../../../public/images/case-studies/real-estate-system/propsuit-screenshot-1.png";
 import productSS2 from "../../../../public/images/case-studies/real-estate-system/propsuit-screenshot-2.jpg";
+import productSS3 from "../../../../public/images/case-studies/real-estate-system/propsuit-screenshot-3.png";
+import productSS4 from "../../../../public/images/case-studies/real-estate-system/propsuit-screenshot-4.jpg";
+import mazhar from "../../../../public/images/testimonials/mazhar.jpg";
 
 export default function Page() {
   return (
-    <div>
+    <>
       <ZoomOnScrollHeader
         image={productSS}
+        imageMob={productSSMob}
+        imageTab={productSSTab}
         alt="Propsuit Application Screenshot"
-        title={<>Comprehensive Real Estate Management System</>}
+        title={
+          <>
+            Real Estate
+            <br />
+            Management System
+          </>
+        }
         desc="A leading real estate company approached us with a critical challenge: modernizing their traditional paper-based processes into a fully cloud-based software solution. The goal was to centralize all operations—ranging from stock management to customer relations—into one secure, scalable, and easy-to-use platform."
         primaryButton="View Demo"
         secondaryButton="Github"
@@ -64,7 +78,7 @@ export default function Page() {
       <DownImageHeader
         title="Building Trust Through Transparency"
         desc="Real estate relies heavily on customer trust. The system provides complete history of customer interactions, agreements, and payments, ensuring every detail is securely stored and easily accessible."
-        image={productSS}
+        image={productSS3}
         alt="Propsuit app screenshot"
         iconbox={[
           {
@@ -101,11 +115,32 @@ export default function Page() {
             icon: <MdOutlineShoppingCart />,
           },
         ]}
-        image={productSS2}
+        image={productSS4}
         alt="Propsuit Application Mockup"
         buttons={false}
         align="left"
       />
-    </div>
+
+      <div className="w-full px-[5%] py-10 md:py-16 lg:py-20  text-neutral-600">
+        <p className="md:font-semibold text-md md:text-xl lg:text-4xl text-center leading-[1.2]">
+          The Real Estate Management System transformed the client&apos;s
+          operations from fragmented paper records into a streamlined digital
+          ecosystem. With all processes now managed in one cloud-based platform,
+          the company experiences improved efficiency, reduced errors, and
+          better decision-making capabilities.
+        </p>
+      </div>
+      <div className="w-full px-[5%] pb-10 md:pb-16 lg:pb-20 flex flex-row justify-center ">
+        <div className="max-w-3xl">
+          <TestimonialCard
+            name="Mazharul Islam"
+            feedback="We are incredibly pleased with Devion Ark! They developed a fantastic real estate management system for us that is streamlined our operations. Their team was professional, responsive, and delivered exactly what we needed. Highly recommend their services!"
+            designation="Cheif Technology Officer, Shikder Foundation"
+            img={mazhar}
+            align="center"
+          />
+        </div>
+      </div>
+    </>
   );
 }

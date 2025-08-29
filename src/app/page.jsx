@@ -5,8 +5,17 @@ import { Services } from "@/components/home/Services";
 import FeaturesSection from "@/components/layouts/FeaturesSection";
 import { MiddleImageIconBoxSection } from "@/components/layouts/MiddleImageIconBoxSection";
 import { Portfolio } from "@/components/layouts/Portfolio";
+import { UpDownSliderStack } from "@/components/layouts/UpDownSliderStack";
 import { Testimonials } from "@/components/testimonials/Testimonials";
 import LogoCloud from "@/components/ui/logo-cloud";
+import {
+  BUSINESSCONSULTANCY,
+  CUSTOMSOFTWARESOLUTIONS,
+  SEARCHENGINEMARKETING,
+  SEARCHENGINEOPTIMIZATION,
+  SOCIALMEDIAMARKETING,
+  WEBAPPDEVELOPMENT,
+} from "@/routes/websiteRoute";
 import Head from "next/head";
 import { AiOutlineThunderbolt } from "react-icons/ai";
 import { CgWebsite } from "react-icons/cg";
@@ -24,6 +33,12 @@ import officeParty from "../../public/images/Gallery/office-party.jpg";
 import playTime from "../../public/images/Gallery/play-time.jpg";
 import workPlace from "../../public/images/Gallery/work-place.jpg";
 import mutualTrustImg from "../../public/images/mutual-trust.jpg";
+import businessConsultancyImg from "../../public/images/services/business-consultancy.jpg";
+import customSoftImg from "../../public/images/services/custom-soft.jpg";
+import semImg from "../../public/images/services/sem.jpg";
+import seoImg from "../../public/images/services/seo.jpg";
+import socialMarketingImg from "../../public/images/services/social-marketing.jpg";
+import webDevImg from "../../public/images/services/web-dev.jpg";
 
 export default function Home() {
   return (
@@ -68,8 +83,110 @@ export default function Home() {
           },
         ]}
       />
-
-      <Services />
+      <UpDownSliderStack
+        title={
+          <>
+            Empowering Your
+            <br />
+            Digital Journey
+          </>
+        }
+        tagline="Innovate"
+        desc="We're more than a digital service provider company in Bangladesh – we're your business growth partners. Specializing in custom software development, website solutions, and data-driven digital marketing services, we empower businesses across Dhaka and beyond to outrank competitors, streamline operations, and connect with their audience."
+        renderBox={[
+          {
+            title: "Custom Software Solutions",
+            tagline: "Tech Solution",
+            desc: "Every business is unique. We build custom tools that improve efficiency, automate tasks, and solve real challenges.",
+            url: CUSTOMSOFTWARESOLUTIONS,
+            image: customSoftImg,
+            alt: "Software Development Service",
+            tags: [
+              "E-commerce App",
+              "Management System",
+              "Cloud Computing",
+              "Agentic AI",
+              "Software As A Service",
+            ],
+          },
+          {
+            title: "Web Application Development",
+            tagline: "Tech Solution",
+            desc: "Build modern, scalable web apps that streamline operations, boost performance, and deliver smooth user experiences.",
+            url: WEBAPPDEVELOPMENT,
+            image: webDevImg,
+            alt: "Web Application Development Service",
+            tags: [
+              "Business Site",
+              "Personal Porfolio",
+              "News Portal",
+              "Wordpress",
+              "Responsive",
+              "Cross-browser Compatibility",
+            ],
+          },
+          {
+            title: "Social Media Marketing",
+            tagline: "Marketing Solution",
+            desc: "Create brand awareness, engage your audience, and drive conversions with platform-specific social media strategies.",
+            url: SOCIALMEDIAMARKETING,
+            image: socialMarketingImg,
+            alt: "Social Media Marketing Service",
+            tags: [
+              "Page Setup",
+              "Organic Promotions",
+              "Ads Campaign",
+              "Optimization",
+              "Business Suite",
+            ],
+          },
+          {
+            title: "Search Engine Optimization",
+            tagline: "Digital Growth Solution",
+            desc: "Rank higher on search engines with SEO strategies that improve visibility, grow traffic, and attract the right leads.",
+            url: SEARCHENGINEOPTIMIZATION,
+            image: seoImg,
+            alt: "Search Engine Optimization Service",
+            tags: [
+              "On-page SEO",
+              "Off-page SEO",
+              "Keyword Research",
+              "Technical SEO",
+              "Meta Tags",
+            ],
+          },
+          {
+            title: "Search Engine Marketing",
+            tagline: "Marketing Solution",
+            desc: "Target the right audience through paid ads that drive instant traffic, boost reach, and deliver measurable results.",
+            url: SEARCHENGINEMARKETING,
+            image: semImg,
+            alt: "Search Engine Marketing Service",
+            tags: [
+              "Google My Business",
+              "Organic Optimization",
+              "Keyword Research",
+              "Audience Research",
+              "Ads Campaign",
+            ],
+          },
+          {
+            title: "Business Consultancy",
+            tagline: "Business Development",
+            desc: "Get expert digital guidance to refine your strategy, optimize operations, and scale your business confidently.",
+            url: BUSINESSCONSULTANCY,
+            image: businessConsultancyImg,
+            alt: "Business Consultancy Service",
+            tags: [
+              "Competitor Analysis",
+              "Marketing Planning",
+              "Strategy Discuss",
+              "Budget Optimization",
+              "24/7 Support",
+            ],
+          },
+        ]}
+      />
       <LogoCloud />
       <Portfolio />
       <Empower />

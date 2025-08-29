@@ -3,11 +3,30 @@
 import { PrimaryButton, SecondaryButton } from "@/components/buttons/Buttons";
 import { motion, useScroll, useSpring, useTransform } from "motion/react";
 import Image from "next/image";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import { Spotlight } from "../ui/spotlight-new";
 
-const useRelume = () => {
+function useBreakpoint() {
+  const [breakpoint, setBreakpoint] = useState("desktop");
+
+  useEffect(() => {
+    const update = () => {
+      if (window.innerWidth < 768)
+        setBreakpoint("mobile"); // tailwind sm breakpoint
+      else if (window.innerWidth < 1024 && window.innerWidth > 768)
+        setBreakpoint("tablet"); // tailwind lg breakpoint
+      else setBreakpoint("desktop");
+    };
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
+
+  return breakpoint;
+}
+
+const useOnScrollZoom = () => {
   const transformRef = useRef(null);
 
   const { scrollY, scrollYProgress } = useScroll({ target: transformRef });
@@ -27,11 +46,7 @@ const useRelume = () => {
     [0.3, 1],
     ["90%", "100%"]
   );
-  const height = useTransform(
-    animatedScrollYProgress,
-    [0.3, 1],
-    ["80vh", "100vh"]
-  );
+
   const y = useTransform(animatedScrollYProgress, [0, 1], ["0vh", "-10vh"]);
 
   return {
@@ -40,7 +55,6 @@ const useRelume = () => {
     fadeOut,
     scaleDown,
     yFirst,
-    height,
     y,
   };
 };
@@ -51,16 +65,22 @@ export function ZoomOnScrollHeader({
   primaryButton,
   secondaryButton,
   image,
+  imageMob = {},
+  imageTab = {},
   alt,
 }) {
-  const useActive = useRelume();
+  const useActive = useOnScrollZoom();
+  const breakpoint = useBreakpoint();
+
+  const aspect =
+    breakpoint === "mobile" ? "1/2" : breakpoint === "tablet" ? "2/3" : "16/9";
   return (
     <section
-      className="relative flex h-[300vh] flex-col items-center bg-neutral-950 text-neutral-300"
+      className="relative flex h-[300vh] flex-col items-center bg-neutral-950 text-neutral-300 pt-16 md:pt-20 lg:pt-28"
       ref={useActive.transformRef}
     >
       <div className="px-[5%] relative z-[2]">
-        <div className="sticky top-0 z-0 mx-auto flex min-h-[80vh] max-w-3xl items-center justify-center py-16 text-center md:py-24 lg:py-28">
+        <div className="sticky top-0 z-0 mx-auto flex max-w-3xl items-center justify-center text-center">
           <motion.div
             style={{ opacity: useActive.fadeOut, scale: useActive.scaleDown }}
           >
@@ -86,23 +106,44 @@ export function ZoomOnScrollHeader({
       <motion.div
         style={{
           width: useActive.width,
-          height: useActive.height,
           y: useActive.y,
         }}
-        className="sticky top-[10vh] z-10 mb-[-10vh] flex flex-col justify-start rounded-[10px] overflow-hidden"
+        className="sticky top-[10vh] z-10 mb-[-10vh] flex flex-col justify-start  overflow-hidden mt-12"
       >
-        <Image
-          src={image.src}
-          alt={alt}
-          className="w-full h-full object-cover object-left"
-          fill
-        />
+        <div
+          className="relative w-full"
+          style={{ height: "auto", aspectRatio: aspect }}
+        >
+          {breakpoint === "mobile" && (
+            <Image
+              src={imageMob.src}
+              alt={alt}
+              className="w-full h-full object-cover"
+              fill
+            />
+          )}
+          {breakpoint === "tablet" && (
+            <Image
+              src={imageTab.src}
+              alt={alt}
+              className="w-full h-full object-cover"
+              fill
+            />
+          )}
+          {breakpoint === "desktop" && (
+            <Image
+              src={image.src}
+              alt={alt}
+              className="w-full h-full object-cover"
+              fill
+            />
+          )}
+        </div>
       </motion.div>
       <div className="absolute inset-0 -z-10 mt-[100vh]" />
       <div className="w-full absolute inset-0 overflow-hidden z-[1]">
         <Spotlight />
       </div>
-      <div className="absolute w-full h-[480px] bg-gradient-to-t from-neutral-950 to-transparent left-0 right-0 -bottom-[1px] z-[100]"></div>
     </section>
   );
 }
