@@ -14,7 +14,7 @@ import treatosBd from "../../../public/images/partners/treatosBD.png";
 
 export default function LogoCloud() {
   return (
-    <section className="overflow-hidden pb-7 md:pb-10 lg:pb-16 bg-neutral-100 md:bg-white">
+    <section className="overflow-hidden py-7 my:pb-10 lg:py-16 bg-neutral-100 md:bg-white">
       <div className="group relative m-auto max-w-7xl px-6">
         <div className="flex flex-col items-center md:flex-row">
           <div className="md:max-w-44 md:border-r border-neutral-600 md:pr-6">

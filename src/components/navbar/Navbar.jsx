@@ -1,11 +1,14 @@
 "use client";
 
 import {
+  ABOUT,
   BUSINESSCONSULTANCY,
   CASESTUDIES,
   CONTACT,
   CUSTOMSOFTWARESOLUTIONS,
+  GYMCENTERBUSINESSWEBSITE,
   HOME,
+  PETSHOPECOMMERCE,
   PROPSUITAPP,
   SEARCHENGINEMARKETING,
   SEARCHENGINEOPTIMIZATION,
@@ -31,9 +34,9 @@ import {
 } from "react-icons/lu";
 import { RxChevronDown } from "react-icons/rx";
 import { useMediaQuery } from "react-responsive";
+import gymWebMock from "../../../public/images/case-studies/gymnasium-website/gym-web-srcnshot-2.jpg";
+import realEstateMock from "../../../public/images/case-studies/real-estate-system/propsuit-screenshot-2.jpg";
 import logo from "../../../public/images/logo/logo.png";
-import gymWebMock from "../../../public/images/portfolio/gym-website.jpg";
-import realEstateMock from "../../../public/images/portfolio/real-estate-software.jpg";
 import { LinkButton, PrimaryButton } from "../buttons/Buttons";
 const useRelume = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -350,74 +353,14 @@ export function Navbar() {
                     <div className="relative flex max-w-none flex-1 p-6 md:py-8 md:pr-0 md:pl-8 lg:max-w-md">
                       <div className="relative z-10 grid w-full auto-cols-fr auto-rows-max grid-cols-1 grid-rows-[max-content_max-content] gap-4">
                         <h4 className="text-sm leading-[1.3] font-semibold">
-                          Featured from Blog
+                          Featured Articles
                         </h4>
                         <div className="grid auto-cols-fr grid-cols-1 grid-rows-[auto_auto] items-start gap-y-2 lg:grid-rows-[auto]">
-                          <a
-                            href="#"
-                            className="flex auto-cols-fr grid-cols-[0.6fr_1fr] flex-col gap-x-6 py-2 md:grid"
-                          >
-                            <div className="relative w-full pt-[66.66%]">
-                              <img
-                                src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
-                                alt="Relume placeholder image 1"
-                                className="absolute inset-0 size-full object-cover"
-                              />
-                            </div>
-                            <div className="rt-4 mt-4 flex flex-col justify-start md:mt-0">
-                              <h5 className="mb-1 font-semibold text-white">
-                                The Rising Influence of Social Media
-                              </h5>
-                              <p className="text-sm">
-                                A comprehensive analysis of demographics and
-                                trends for 2025-2026.
-                              </p>
-                              <div className="mt-1.5">
-                                <LinkButton
-                                  text="Read more"
-                                  className="text-sm text-neutral-300"
-                                  icon={false}
-                                />
-                              </div>
-                            </div>
-                          </a>
-                          <a
-                            href="#"
-                            className="flex auto-cols-fr grid-cols-[0.6fr_1fr] flex-col gap-x-6 py-2 md:grid"
-                          >
-                            <div className="relative w-full pt-[66.66%]">
-                              <img
-                                src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
-                                alt="Relume placeholder image 2"
-                                className="absolute inset-0 size-full object-cover"
-                              />
-                            </div>
-                            <div className="rt-4 mt-4 flex flex-col justify-start md:mt-0">
-                              <h5 className="mb-1 font-semibold text-white">
-                                Is SEO Dead? Will AEO Take Over the Industry in
-                                2025?
-                              </h5>
-                              <p className="text-sm">
-                                The rise of AEO with voice search and featured
-                                snippets.
-                              </p>
-                              <div className="mt-1.5">
-                                <LinkButton
-                                  text="Read more"
-                                  className="text-sm text-neutral-300"
-                                  icon={false}
-                                />
-                              </div>
-                            </div>
-                          </a>
+                          <div className="text-neutral-600 font-semibold text-lg">
+                            No article available
+                          </div>
                         </div>
-                        <div className="flex items-center">
-                          <LinkButton
-                            className="text-white"
-                            url="/articles"
-                            text="See all articles"
-                          />
-                        </div>
+                        <div className="flex items-center"></div>
                       </div>
                       <div className="absolute top-0 right-auto bottom-0 left-0 min-w-full bg-neutral-950-secondary lg:min-w-[100vw]" />
                     </div>
@@ -497,7 +440,7 @@ export function Navbar() {
                           </div>
                         </a>
                         <a
-                          href="#"
+                          href={PETSHOPECOMMERCE}
                           className="grid w-full grid-cols-[max-content_1fr] items-start gap-x-3 py-2"
                         >
                           <div className="flex flex-col items-center justify-center p-1">
@@ -533,7 +476,7 @@ export function Navbar() {
                       </div>
                       <div className="grid auto-rows-max grid-cols-1 grid-rows-[max-content] gap-y-2 md:gap-y-4">
                         <a
-                          href="#"
+                          href={GYMCENTERBUSINESSWEBSITE}
                           className="grid w-full grid-cols-[max-content_1fr] items-start gap-x-3 py-2"
                         >
                           <div className="flex flex-col items-center justify-center p-1">
@@ -604,7 +547,7 @@ export function Navbar() {
                             </div>
                           </a>
                           <a
-                            href="#"
+                            href={GYMCENTERBUSINESSWEBSITE}
                             className="flex auto-cols-fr grid-cols-[0.6fr_1fr] flex-col gap-x-6 py-2 md:grid"
                           >
                             <div className="relative w-full overflow-hidden  rounded-xs">
@@ -623,6 +566,7 @@ export function Navbar() {
                               </p>
                               <div className="mt-1.5">
                                 <LinkButton
+                                  url={GYMCENTERBUSINESSWEBSITE}
                                   text="Read more"
                                   icon={false}
                                   className="text-sm text-neutral-300"
@@ -646,7 +590,7 @@ export function Navbar() {
               </motion.div>
             </div>
             <a
-              href="#"
+              href={ABOUT}
               className={`block py-3 text-md first:pt-7 lg:px-4 lg:py-6 lg:text-base first:lg:pt-6 ${
                 pathname === "/about" ? "text-accentColor1" : "text-neutral-300"
               }`}

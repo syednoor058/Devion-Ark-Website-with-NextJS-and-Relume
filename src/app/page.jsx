@@ -1,7 +1,6 @@
 import { ImageGallery } from "@/components/gallery/ImageGallery";
 import { Empower } from "@/components/home/Empower";
 import { Hero } from "@/components/home/Hero";
-import { Services } from "@/components/home/Services";
 import FeaturesSection from "@/components/layouts/FeaturesSection";
 import { MiddleImageIconBoxSection } from "@/components/layouts/MiddleImageIconBoxSection";
 import { Portfolio } from "@/components/layouts/Portfolio";

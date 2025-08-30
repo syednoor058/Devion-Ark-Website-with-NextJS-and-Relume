@@ -1,6 +1,7 @@
 import { PrimaryButton, SecondaryButton } from "@/components/buttons/Buttons";
 import { InfiniteSlider } from "@/components/ui/infinite-slider";
 import Image from "next/image";
+import { Spotlight } from "../ui/spotlight-new";
 
 export function DoubleSliderHeader({
   title,
@@ -11,7 +12,7 @@ export function DoubleSliderHeader({
   images2 = [],
 }) {
   return (
-    <section className="pt-20 md:pt-24 lg:pt-28 bg-neutral-950 text-neutral-300">
+    <section className="pt-20 md:pt-24 lg:pt-28 bg-neutral-950 text-neutral-300 relative">
       <div className="flex flex-col items-center">
         <div className="mx-auto px-[5%] md:px-0 w-full max-w-3xl text-center">
           <h1 className="mb-5 text-3xl font-bold md:mb-6 md:text-4xl lg:text-5xl text-white">
@@ -67,6 +68,9 @@ export function DoubleSliderHeader({
             ))}
           </InfiniteSlider>
         </div>
+      </div>
+      <div className="w-full absolute inset-0 overflow-hidden z-[1]">
+        <Spotlight />
       </div>
     </section>
   );

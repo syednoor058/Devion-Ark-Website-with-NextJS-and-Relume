@@ -10,3 +10,6 @@ export const SEARCHENGINEMARKETING = '/services/search-engine-marketing';
 export const SEARCHENGINEOPTIMIZATION = '/services/search-engine-optimization';
 export const BUSINESSCONSULTANCY = '/services/business-consultancy';
 export const PROPSUITAPP = '/case-studies/real-estate-management-system';
+export const PETSHOPECOMMERCE = '/case-studies/petshop-ecommerce-web-application';
+export const GYMCENTERBUSINESSWEBSITE = '/case-studies/gym-center-business-website';
+export const DEVELOPERPORTFOLIOWEBSITE = '/case-studies/developer-portfolio-website';

@@ -14,7 +14,7 @@ import productSS3 from "../../../../public/images/case-studies/real-estate-syste
 import productSS4 from "../../../../public/images/case-studies/real-estate-system/propsuit-screenshot-4.jpg";
 import mazhar from "../../../../public/images/testimonials/mazhar.jpg";
 
-export default function Page() {
+export default function RealEstateManagementSystem() {
   return (
     <>
       <ZoomOnScrollHeader
