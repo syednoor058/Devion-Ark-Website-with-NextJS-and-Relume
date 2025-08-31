@@ -6,6 +6,7 @@ import { Fragment, useRef } from "react";
 import { useMediaQuery } from "react-responsive";
 import bgElement from "../../../public/images/shapes/bg-elem-2.png";
 import { SecondaryButton } from "../buttons/Buttons";
+import { BorderTrail } from "../ui/border-trail";
 
 const ConditionalRender = ({ condition, children }) => {
   return condition ? <>{children}</> : null;
@@ -90,13 +91,17 @@ export function UpDownSliderStack({ tagline, title, desc, renderBox = [{}] }) {
               </ConditionalRender>
               <ConditionalRender condition={renderTablet.isTablet}>
                 <motion.div
-                  className="static grid grid-cols-1 content-center overflow-hidden bg-white md:sticky md:top-[10%] md:mb-[10vh] md:h-[80vh] md:grid-cols-2 rounded-[15px] custom-shadow border-t-2 border-neutral-200"
+                  className="grid grid-cols-1 content-center overflow-hidden bg-white md:sticky md:top-[10%] md:mb-[10vh] md:h-[80vh] md:grid-cols-2 rounded-[15px] border border-neutral-300 relative custom-shadow"
                   style={{
                     scale: useScroll.calculateScale(index, renderBox.length),
                   }}
                 >
                   <Fragment>
-                    <div className="order-first flex flex-col justify-center p-6 md:p-8 lg:p-12 md:order-first bg-neutral-100">
+                    <div
+                      className={`order-first flex flex-col justify-center p-6 md:p-8 lg:p-12 ${
+                        index % 2 === 0 ? "md:order-first" : "md:order-last"
+                      } bg-neutral-100`}
+                    >
                       <p className="mb-2 font-semibold text-accentColor1 md:text-lg xl:text-xl">
                         {box.tagline}
                       </p>
@@ -123,7 +128,11 @@ export function UpDownSliderStack({ tagline, title, desc, renderBox = [{}] }) {
                         />
                       </div>
                     </div>
-                    <div className="order-last flex flex-col items-center justify-center md:order-last relative h-full">
+                    <div
+                      className={`order-last flex flex-col items-center justify-center ${
+                        index % 2 === 0 ? "md:order-last" : "md:order-first"
+                      } relative h-full overflow-hidden `}
+                    >
                       <Image
                         src={box.image}
                         alt={box.alt}

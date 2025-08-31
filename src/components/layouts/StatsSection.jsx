@@ -1,11 +1,25 @@
 "use client";
 
-import { BackgroundRippleEffect } from "../ui/background-ripple-effect";
+import BeamAnimationBackground from "../ui/beam-animation-background";
+import CountUp from "../ui/count-up";
 
 export function StatsSection({ tagline, title, desc, percentageBox = [] }) {
   return (
     <section className="px-[5%] py-10 md:py-14 lg:py-20 bg-neutral-950 text-neutral-300 relative">
-      <div className="container">
+      <div className="absolute w-full h-full inset-0 z-[0]">
+        <BeamAnimationBackground
+          beamWidth={4}
+          beamHeight={15}
+          beamNumber={15}
+          lightColor="#ffffff"
+          speed={2}
+          noiseIntensity={1.75}
+          scale={0.2}
+          rotation={0}
+        />
+      </div>
+
+      <div className="relative z-[2]">
         <div className="mb-12 max-w-3xl md:mb-18 lg:mb-20">
           <p className="mb-3 font-semibold md:mb-4 md:text-md lg:text-lg bg-gradient-to-tr from-accentColor1 to-accentColor2 bg-clip-text text-transparent">
             {tagline}
@@ -18,8 +32,9 @@ export function StatsSection({ tagline, title, desc, percentageBox = [] }) {
         <div className="grid grid-cols-1 gap-y-8 md:grid-cols-3 md:gap-x-8 lg:gap-x-12 lg:gap-y-16">
           {percentageBox.map((box, index) => (
             <div key={index} className="border-l-2 border-neutral-500 pl-8">
-              <p className="mb-2 text-[3.5rem] leading-[1.3] font-bold md:text-[4rem] lg:text-[5rem] bg-gradient-to-tr from-accentColor1 to-accentColor2 bg-clip-text text-transparent">
-                {box.number}%
+              <p className="mb-2 text-[3.5rem] leading-[1.3] font-bold md:text-[4rem] lg:text-[5rem] bg-gradient-to-t from-accentColor1 to-accentColor2 bg-clip-text text-transparent">
+                <CountUp from={0} to={box.number} direction="up" duration={2} />
+                %
               </p>
               <h3 className="heading-h6 font-bold">{box.text}</h3>
             </div>

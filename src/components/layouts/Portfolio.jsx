@@ -2,6 +2,7 @@
 
 import { SecondaryButton } from "../buttons/Buttons";
 import { PortfolioBentoGrid } from "../grids/Grids";
+import BeamAnimationBackground from "../ui/beam-animation-background";
 
 export function Portfolio({ expanded = false }) {
   return (
@@ -9,6 +10,19 @@ export function Portfolio({ expanded = false }) {
       id="portfolio-section"
       className="px-[5%] py-10 md:py-16 lg:py-20 bg-neutral-950 relative text-neutral-300"
     >
+      <div className="absolute w-full h-full inset-0 z-[0] flex justify-center items-center opacity-40 ">
+        <BeamAnimationBackground
+          beamWidth={2}
+          beamHeight={15}
+          beamNumber={10}
+          lightColor="#ffffff"
+          speed={2}
+          noiseIntensity={1.75}
+          scale={0.2}
+          rotation={45}
+        />
+      </div>
+      <div className="backdrop-blur-[4px] absolute w-full h-full inset-0 z-[1]"></div>
       <div className="relative z-[3]">
         <header className="w-full mb-12 md:mb-18 lg:mb-20 flex flex-col items-center">
           <div className="max-w-3xl flex flex-col justify-center items-center">

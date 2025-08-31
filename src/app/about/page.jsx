@@ -42,8 +42,8 @@ const About = () => {
         image3={{ img: officeEnv3, alt: "Office Environment 3" }}
         image4={{ img: officeEnv5, alt: "Office Environment 5" }}
       />
-      <div className="w-full px-[5%] py-10 md:py-16 lg:py-20 bg-neutral-950 text-neutral-300">
-        <p className="text-white md:font-semibold text-md md:text-xl lg:text-4xl indent-20 lg:indent-32 leading-[1.2]">
+      <div className="w-full px-[5%] py-10 md:py-16 lg:py-20 bg-neutral-950 text-neutral-300 relative">
+        <p className="text-white md:font-semibold text-md md:text-xl lg:text-4xl indent-20 lg:indent-32 leading-[1.2] relative z-[2]">
           At our core, we are a team of passionate technologists, creative
           thinkers, and marketing strategists committed to helping businesses
           thrive in the digital era. From building custom software solutions and
@@ -93,15 +93,15 @@ const About = () => {
         desc="Our success is measured by the growth and satisfaction of our clients. Over the years, we’ve consistently delivered projects that not only meet expectations but also exceed them. These numbers reflect our dedication, expertise, and the trust businesses place in us to power their digital transformation."
         percentageBox={[
           {
-            number: "95",
+            number: 95,
             text: "Client satisfaction rate across software and marketing projects.",
           },
           {
-            number: "80",
+            number: 80,
             text: "Average business growth achieved through our digital strategies.",
           },
           {
-            number: "72",
+            number: 72,
             text: "Projects completed ahead of schedule without compromising quality.",
           },
         ]}

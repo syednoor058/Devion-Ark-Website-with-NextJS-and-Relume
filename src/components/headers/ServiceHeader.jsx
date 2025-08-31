@@ -12,6 +12,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import { PrimaryButton, SecondaryButton } from "../buttons/Buttons";
+import { Spotlight } from "../ui/spotlight-new";
 
 const useCarousel = () => {
   const [api, setApi] = useState();
@@ -62,7 +63,7 @@ const useCarousel = () => {
 const ServiceHeader = ({ title, desc, images }) => {
   const carousel = useCarousel();
   return (
-    <section className="grid grid-cols-1 items-center gap-y-16 overflow-hidden pt-16 sm:overflow-auto md:pt-24 lg:grid-cols-[50%_50%] lg:gap-y-0 lg:pt-0 bg-neutral-950 text-neutral-300">
+    <section className="grid grid-cols-1 items-center gap-y-16 overflow-hidden pt-16 sm:overflow-auto md:pt-24 lg:grid-cols-[50%_50%] lg:gap-y-0 lg:pt-0 bg-neutral-950 text-neutral-300 relative">
       <div className="mx-[5%] justify-self-start lg:mr-20 lg:ml-[5vw] lg:justify-self-end">
         <h1 className="mb-5 text-3xl font-bold md:mb-6 md:text-4xl lg:text-5xl text-white">
           {title}
@@ -131,6 +132,9 @@ const ServiceHeader = ({ title, desc, images }) => {
             <CarouselNext className="top-auto right-8 bottom-5 left-auto size-12 bg-transparent" />
           </div>
         </Carousel>
+      </div>
+      <div className="w-full absolute inset-0 overflow-hidden z-[1]">
+        <Spotlight />
       </div>
     </section>
   );

@@ -3,8 +3,14 @@
 import { motion, useScroll, useSpring, useTransform } from "motion/react";
 import Image from "next/image";
 import { useRef } from "react";
-import { FaArrowRight } from "react-icons/fa6";
-import { PrimaryButton, SecondaryButton } from "../buttons/Buttons";
+import { FaStar } from "react-icons/fa6";
+import azizul from "../../../public/images/testimonials/azizul.webp";
+import farhanMasum from "../../../public/images/testimonials/farhan_masum.webp";
+import mazhar from "../../../public/images/testimonials/mazhar.jpg";
+import mustafa from "../../../public/images/testimonials/mehedi.webp";
+import rakib from "../../../public/images/testimonials/rakib.webp";
+import tanjina from "../../../public/images/testimonials/tanjina.jpg";
+import { AnimatedAvatar } from "../ui/animated-avatar";
 import { Spotlight } from "../ui/spotlight-new";
 
 const useRelume = () => {
@@ -32,8 +38,6 @@ const useRelume = () => {
 export function FourImagesOnScrollHeader({
   title,
   desc,
-  primaryButton = "Hire Us",
-  secondaryButton = "View Our Work",
   image1 = {},
   image2 = {},
   image3 = {},
@@ -98,17 +102,70 @@ export function FourImagesOnScrollHeader({
               {title}
             </h1>
             <p className="md:text-md text-neutral-300 relative z-20">{desc}</p>
-            <div className="mt-6 flex items-center justify-center gap-x-4 md:mt-8 mb-5 relative z-[20]">
-              <PrimaryButton
-                text={primaryButton}
-                icon={
-                  <FaArrowRight className="group-hover:-rotate-45 transition-all duration-300 ease-in ml-3 text-sm" />
-                }
+            <div className="mt-6 flex flex-col items-center justify-center gap-x-4 md:mt-8 mb-5 relative z-[20]">
+              <AnimatedAvatar
+                items={[
+                  {
+                    id: 1,
+                    name: "Mustafa Mehedi",
+                    designation: "Founder & CEO",
+                    image: mustafa,
+                  },
+                  {
+                    id: 2,
+                    name: "Rakib Shikdar",
+                    designation: "Founder & CEO",
+                    image: rakib,
+                  },
+                  {
+                    id: 3,
+                    name: "Tanjina Tanha",
+                    designation: "Founder & CEO",
+                    image: tanjina,
+                  },
+                  {
+                    id: 4,
+                    name: "Md Mazharul Islam",
+                    designation: "Co-Founder & CTO",
+                    image: mazhar,
+                  },
+                  {
+                    id: 5,
+                    name: "Md Azizul Hoque",
+                    designation: "Founder",
+                    image: azizul,
+                  },
+                  {
+                    id: 6,
+                    name: "Farhan Masum",
+                    designation: "Co-Founder & CMO",
+                    image: farhanMasum,
+                  },
+                ]}
               />
-              <SecondaryButton
-                text={secondaryButton}
-                className="border-neutral-300 text-neutral-300"
-              />
+              <div className="mt-2 text-lg">
+                12+ Satisfied clients all around the world.
+              </div>
+              <div className="leading-none mt-1.5">
+                <div className="flex flex-row gap-[2px] text-xs">
+                  <div className="p-1 bg-green-600">
+                    <FaStar className="text-[#fff]" />
+                  </div>
+                  <div className="p-1 bg-green-600">
+                    <FaStar className="text-[#fff]" />
+                  </div>
+                  <div className="p-1 bg-green-600">
+                    <FaStar className="text-[#fff]" />
+                  </div>
+                  <div className="p-1 bg-green-600">
+                    <FaStar className="text-[#fff]" />
+                  </div>
+                  <div className="p-1 bg-gray-400 relative">
+                    <div className="w-[50%] h-full absolute top-0 left-0 bg-green-600 z-[2]"></div>
+                    <FaStar className="text-[#fff] relative z-[5]" />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

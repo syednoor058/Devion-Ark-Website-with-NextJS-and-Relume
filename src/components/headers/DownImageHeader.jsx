@@ -1,9 +1,21 @@
 import Image from "next/image";
 import { BackgroundRippleEffect } from "../ui/background-ripple-effect";
 
-export function DownImageHeader({ title, desc, image, alt, iconbox = [] }) {
+export function DownImageHeader({
+  title,
+  desc,
+  image,
+  alt,
+  iconbox = [],
+  header = false,
+}) {
   return (
-    <section className="px-[5%] py-10 md:py-16 lg:py-20 bg-neutral-950 text-neutral-300 relative">
+    <section
+      className={`px-[5%] ${
+        header ? "py-16 md:py-24 lg:py-28" : "py-10 md:py-16 lg:py-20"
+      } bg-neutral-950 text-neutral-300 relative`}
+    >
+      <div className="absolute w-full h-full inset-0 backdrop-blur-[1px] z-[5]"></div>
       <BackgroundRippleEffect />
       <div className="container relative z-[10]">
         <div className="mb-12 grid grid-cols-1 items-start justify-between gap-x-12 gap-y-5 md:mb-18 md:grid-cols-2 md:gap-x-12 md:gap-y-8 lg:mb-20 lg:gap-x-20">

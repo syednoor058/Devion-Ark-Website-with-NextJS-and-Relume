@@ -598,7 +598,7 @@ export function Navbar() {
               About
             </a>
             <a
-              href="#"
+              href={CONTACT}
               className={`block py-3 text-md first:pt-7 lg:px-4 lg:py-6 lg:text-base first:lg:pt-6 ${
                 pathname === "/contact"
                   ? "text-accentColor1"

@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
+import Iridescence from "../ui/iridescence-background";
 
 const useScrollAnimation = () => {
   const sectionRef = useRef();
@@ -24,10 +25,10 @@ export function OnScrollSlideText() {
   const useAnimations = useScrollAnimation();
   return (
     <section
-      className="overflow-hidden px-[5%] py-3 md:py-5 lg:py-8 bg-gradient-to-br from-accentColor1 to-accentColor2"
+      className="overflow-hidden px-[5%] py-3 md:py-5 lg:py-8 bg-gradient-to-br from-accentColor1 to-accentColor2 relative bg-black"
       ref={useAnimations.sectionRef}
     >
-      <div className="flex flex-col whitespace-nowrap">
+      <div className="flex flex-col whitespace-nowrap relative z-[3]">
         <motion.h1
           style={{ x: useAnimations.xPartOne }}
           className="text-[3rem] lg:text-[6rem] leading-[1.2] font-bold text-white"
@@ -40,6 +41,14 @@ export function OnScrollSlideText() {
         >
           Tailored Solutions For Every Business Need
         </motion.h1>
+      </div>
+      <div className="absolute w-full h-full inset-0 z-[0] opacity-70">
+        <Iridescence
+          color={[1, 1, 1]}
+          mouseReact={false}
+          amplitude={0.1}
+          speed={1.0}
+        />
       </div>
     </section>
   );
