@@ -1,7 +1,6 @@
 import Image from "next/image";
 import office1 from "../../../public/images/office-1.jpg";
 import office2 from "../../../public/images/office-2.jpg";
-import { SecondaryButton } from "../buttons/Buttons";
 
 export function OfficeAddress() {
   return (
@@ -9,46 +8,47 @@ export function OfficeAddress() {
       <div className="container">
         <div className="mx-auto mb-8 max-w-3xl md:mb-12 flex flex-col justify-center text-center ">
           <p className="mb-3 font-semibold md:mb-4 md:text-md lg:text-lg bg-gradient-to-tr from-accentColor1 to-accentColor2 bg-clip-text text-transparent">
-            Reach
+            Reach Us
           </p>
-          <h2 className="mb-5 text-3xl font-bold md:mb-6 md:text-4xl lg:text-5xl text-neutral-800">
-            Locations
+          <h2 className="text-3xl font-bold md:text-4xl lg:text-5xl text-neutral-800">
+            Office Locations
           </h2>
-          <p className="md:text-md text-neutral-300">
-            Find us in major cities around the world.
-          </p>
         </div>
-        <div className="grid auto-cols-fr grid-cols-1 items-center gap-x-12 gap-y-12 md:grid-cols-2 md:gap-16">
-          <div className="flex flex-col items-center justify-start text-center">
-            <div className="mb-6 w-full md:mb-8">
+        <div className="grid auto-cols-fr grid-cols-1 items-center gap-x-12 gap-y-12 lg:grid-cols-2 md:gap-16">
+          <div className="flex flex-row items-center justify-start gap-5 md:gap-10">
+            <div className="w-[40%] md:w-[50%] aspect-[6/4] relative overflow-hidden rounded-sm">
               <Image
                 src={office1}
                 alt="Office 1 environment"
-                className="h-[320px] w-full object-cover md:h-[384px] rounded-[15px]"
+                className=" w-full h-full object-cover"
               />
             </div>
-            <h3 className="heading-h4 mb-3 font-bold lg:mb-4">Head Office</h3>
-            <p className="text-center">
-              08 Tootpara Central Rd, Khulna 9100 Bangladesh
-            </p>
-            <div className="mt-5 md:mt-6">
-              <SecondaryButton text="Get Direction" />
+            <div className="w-[60%] md:w-[50%] flex flex-col">
+              <h3 className="heading-h4 mb-3 font-bold lg:mb-4">Head Office</h3>
+              <p className="">
+                Floor #4, Ideal Syed Tower, 08 Tootpara Central Rd,
+                <br />
+                Khulna 9100 Bangladesh.
+              </p>
             </div>
           </div>
-          <div className="flex flex-col items-center justify-start text-center">
-            <div className="mb-6 w-full md:mb-8">
+          <div className="flex flex-row items-center justify-start gap-7 md:gap-10">
+            <div className="w-[40%] md:w-[50%] aspect-[6/4] relative overflow-hidden rounded-sm">
               <Image
                 src={office2}
                 alt="Office 2 environment"
-                className="h-[320px] w-full object-cover md:h-[384px] rounded-[15px]"
+                className=" w-full h-full object-cover  "
               />
             </div>
-            <h3 className="heading-h4 mb-3 font-bold lg:mb-4">Dhaka Brunch</h3>
-            <p className="text-center">
-              24/8 Shyamoli Square Plaza, Shyamoli Dhaka 2466 Bangladesh
-            </p>
-            <div className="mt-5 md:mt-6">
-              <SecondaryButton text="Get Direction" />
+            <div className="w-[60%] md:w-[50%] flex flex-col">
+              <h3 className="heading-h4 mb-3 font-bold lg:mb-4">
+                Dhaka Brunch
+              </h3>
+              <p className="">
+                Floor #6, Janata Mahal Tower, 30 Kemal Ataturk Ave,
+                <br />
+                Dhaka 1213 Bangladesh.
+              </p>
             </div>
           </div>
         </div>

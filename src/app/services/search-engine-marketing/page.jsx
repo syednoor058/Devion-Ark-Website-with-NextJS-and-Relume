@@ -15,6 +15,13 @@ import semHero1 from "../../../../public/images/services/search-engine-marketing
 import magnifyGlass from "../../../../public/images/services/search-engine-marketing/magnify-glass.jpg";
 import searchingMan from "../../../../public/images/services/search-engine-marketing/searching.jpg";
 import searchMarketer from "../../../../public/images/services/search-engine-marketing/serach-marketer.jpg";
+
+export const metadata = {
+  title: "Search Engine Marketing Services | Devion Ark",
+  description:
+    "Maximize ROI with targeted SEM campaigns. Devion Ark runs data-backed PPC ads that attract the right audience and increase conversions.",
+};
+
 const SearchEngineMarketing = () => {
   return (
     <>

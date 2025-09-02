@@ -15,6 +15,12 @@ import socialInfluncer from "../../../../public/images/services/social-media-mar
 import socialMarketer from "../../../../public/images/services/social-media-marketing/social-marketer.jpg";
 import checkingMobile from "../../../../public/images/services/social-media-marketing/user-checking-phone.jpg";
 
+export const metadata = {
+  title: "Social Media Marketing Agency | Devion Ark",
+  description:
+    "Engage your audience and boost brand visibility with data-driven social media marketing. Devion Ark crafts strategies that deliver real results.",
+};
+
 const SocialMediaMarketing = () => {
   return (
     <>

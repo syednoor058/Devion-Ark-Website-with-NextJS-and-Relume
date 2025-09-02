@@ -15,6 +15,12 @@ import webDesign from "../../../../public/images/services/web-app-development/we
 import webDeveloper from "../../../../public/images/services/web-app-development/web-developer.jpg";
 import websiteMock from "../../../../public/images/services/web-app-development/website-mock.jpg";
 
+export const metadata = {
+  title: "Web App Development Services | Devion Ark",
+  description:
+    "From startups to enterprises, Devion Ark builds high-performance web apps that deliver seamless user experiences and drive business growth.",
+};
+
 const WebApplicationDevelopment = () => {
   return (
     <>

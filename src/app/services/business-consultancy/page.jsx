@@ -16,6 +16,12 @@ import conversation from "../../../../public/images/services/business-consultanc
 import handShake from "../../../../public/images/services/business-consultancy/hand-shake.jpg";
 import mutualTrust from "../../../../public/images/services/business-consultancy/mutual-trust.jpg";
 
+export const metadata = {
+  title: "Business Consultancy Services | Devion Ark",
+  description:
+    "Transform your business with expert consultancy. Devion Ark helps you design strategies, streamline operations, and unlock sustainable growth.",
+};
+
 const SearchEngineOptimization = () => {
   return (
     <>

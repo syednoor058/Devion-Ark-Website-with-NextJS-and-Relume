@@ -24,6 +24,12 @@ import kaziFarhana from "../../../public/images/team/kazi-farhana.png";
 import naimRahman from "../../../public/images/team/naim-rahman.png";
 import shaedNoor from "../../../public/images/team/shaed-noor.png";
 
+export const metadata = {
+  title: "About Devion Ark | Software & Digital Marketing Experts",
+  description:
+    "Devion Ark is a global software and digital marketing agency. Our mission is to empower businesses with technology, creativity, and growth.",
+};
+
 const About = () => {
   return (
     <>

@@ -15,6 +15,12 @@ import softwareDeveloper from "../../../../public/images/services/custom-softwar
 import softwareMaintanance from "../../../../public/images/services/custom-software-solutions/software-maintainance.jpg";
 import softwareSupport from "../../../../public/images/services/custom-software-solutions/software-support.jpg";
 
+export const metadata = {
+  title: "Custom Software Solutions for Businesses | Devion Ark",
+  description:
+    "Boost efficiency with tailor-made software built for your business needs. Devion Ark delivers scalable, secure, and future-ready software solutions.",
+};
+
 const CustomSoftwareSolutions = () => {
   return (
     <>

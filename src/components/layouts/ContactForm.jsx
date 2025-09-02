@@ -25,7 +25,7 @@ export function ContactForm() {
           <h2 className="mb-5 text-3xl font-bold md:mb-6 md:text-4xl lg:text-5xl text-neutral-800">
             Get in Touch
           </h2>
-          <p className="md:text-md text-neutral-300 pl-6 border-l-4 border-accentColor2">
+          <p className="md:text-md pl-6 border-l-4 border-accentColor2">
             We&apos;re here to answer your questions and assist you.
           </p>
         </div>

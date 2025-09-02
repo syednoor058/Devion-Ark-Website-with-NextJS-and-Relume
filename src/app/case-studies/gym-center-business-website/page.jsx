@@ -14,6 +14,12 @@ import productSS3 from "../../../../public/images/case-studies/gymnasium-website
 import productSS4 from "../../../../public/images/case-studies/gymnasium-website/gym-web-srcnshot-4.jpg";
 import mazhar from "../../../../public/images/testimonials/mazhar.jpg";
 
+export const metadata = {
+  title: "Case Study: Gym Center Business Website | Devion Ark",
+  description:
+    "Devion Ark designed a responsive gym business website with modern UI and booking features, helping the fitness brand attract more clients.",
+};
+
 export default function GymCenterBusinessWebsite() {
   return (
     <>

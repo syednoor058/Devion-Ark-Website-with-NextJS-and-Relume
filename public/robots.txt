@@ -1,0 +1,26 @@
+User-agent: *
+Disallow: /_next/
+Disallow: /api/
+Disallow: /admin/
+Disallow: /login/
+Disallow: /dashboard/
+Disallow: /*/edit/
+Disallow: /*?*
+Disallow: /blogs/seo-vs-aeo-in-2025-the-future-of-search-engine-optimization
+
+Allow: /
+Allow: /services/custom-software-solutions
+Allow: /services/business-consultancy
+Allow: /services/search-engine-marketing
+Allow: /services/search-engine-optimization
+Allow: /services/social-media-marketing
+Allow: /services/web-application-development
+Allow: /case-studies/
+Allow: /case-studies/developer-portfolio-website
+Allow: /case-studies/gym-center-business-website
+Allow: /case-studies/petshop-ecommerce-web-application
+Allow: /case-studies/real-estate-management-system
+Allow: /about
+Allow: /contact
+
+Sitemap: https://www.devionark.com/sitemap.xml

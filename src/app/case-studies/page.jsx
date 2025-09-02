@@ -15,6 +15,13 @@ import mockup9 from "../../../public/images/case-studies/mockups/mockup-9.jpg";
 import scrollMockupMobile from "../../../public/images/case-studies/mockups/mockup-scroll-mobile.png";
 import scrollMockupTab from "../../../public/images/case-studies/mockups/mockup-scroll-tab.png";
 import scrollMockup from "../../../public/images/case-studies/mockups/mockup-scroll.png";
+
+export const metadata = {
+  title: "Case Studies - Success Stories from Our Clients | Devion Ark",
+  description:
+    "Explore real client success stories with Devion Ark. See how our software and digital marketing solutions deliver measurable results.",
+};
+
 export default function Page() {
   return (
     <>

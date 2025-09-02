@@ -14,6 +14,12 @@ import productSS3 from "../../../../public/images/case-studies/real-estate-syste
 import productSS4 from "../../../../public/images/case-studies/real-estate-system/propsuit-screenshot-4.jpg";
 import mazhar from "../../../../public/images/testimonials/mazhar.jpg";
 
+export const metadata = {
+  title: "Case Study: Real Estate Management System | Devion Ark",
+  description:
+    "Discover how Devion Ark built a full real estate management system with modern features, helping agencies streamline property management.",
+};
+
 export default function RealEstateManagementSystem() {
   return (
     <>

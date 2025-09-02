@@ -17,6 +17,13 @@ import keywordsResearch from "../../../../public/images/services/search-engine-o
 import keywords from "../../../../public/images/services/search-engine-optimization/keywords.jpg";
 import seoLaptop from "../../../../public/images/services/search-engine-optimization/seo-laptop.jpg";
 import seoTeam from "../../../../public/images/services/search-engine-optimization/seo-team.jpg";
+
+export const metadata = {
+  title: "SEO - Rank Higher & Drive Organic Traffic | Devion Ark",
+  description:
+    "Dominate search results with Devion Ark's proven SEO strategies. We optimize your website for better visibility, traffic, and conversions.",
+};
+
 const SearchEngineOptimization = () => {
   return (
     <>

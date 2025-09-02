@@ -15,6 +15,12 @@ import productSS3 from "../../../../public/images/case-studies/developer-portfol
 import productSS4 from "../../../../public/images/case-studies/developer-portfolio-website/portfolio-site-scrnshot-4.jpg";
 import mazhar from "../../../../public/images/testimonials/mazhar.jpg";
 
+export const metadata = {
+  title: "Case Study: Developer Personal Portfolio Website | Devion Ark",
+  description:
+    "We built a personal portfolio website that highlights skills, projects, and achievements—helping the client build a strong online presence.",
+};
+
 export default function DeveloperPortfolioWebsite() {
   return (
     <>

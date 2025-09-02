@@ -7,6 +7,12 @@ import { MdOutlineCall } from "react-icons/md";
 import contactHeader from "../../../public/images/contact-hero.jpg";
 import map from "../../../public/images/map.jpg";
 
+export const metadata = {
+  title: "Contact Devion Ark | Let’s Build Something Amazing",
+  description:
+    "Get in touch with Devion Ark for custom software development and digital marketing. Let’s discuss how we can take your business to the next level.",
+};
+
 const Contact = () => {
   return (
     <>
@@ -39,7 +45,7 @@ const Contact = () => {
       />
       <ContactForm />
       <OfficeAddress />
-      <div className="py-10 md:py-14 lg:py-20 px-[5%] w-full relative overflow-hidden rounded-[15px]">
+      <div className="pb-10 md:pb-14 lg:pb-20 px-[5%] w-full relative overflow-hidden rounded-[15px]">
         <Image
           src={map}
           alt="Head office location google map"

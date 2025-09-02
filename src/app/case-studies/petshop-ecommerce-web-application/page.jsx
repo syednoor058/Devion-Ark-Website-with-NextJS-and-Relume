@@ -15,6 +15,12 @@ import productSS3 from "../../../../public/images/case-studies/petshop-ecommerce
 import productSS4 from "../../../../public/images/case-studies/petshop-ecommerce/pet-ecommerce-scrnshot-4.jpg";
 import mazhar from "../../../../public/images/testimonials/mazhar.jpg";
 
+export const metadata = {
+  title: "Case Study: Petshop E-Commerce Web App | Devion Ark",
+  description:
+    "A complete e-commerce platform for pet lovers. Learn how Devion Ark built a petshop app to manage orders for food, medicine, and accessories.",
+};
+
 export default function PetShopEcommerce() {
   return (
     <>
